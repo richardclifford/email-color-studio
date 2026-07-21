@@ -1,0 +1,17 @@
+:root {
+  --font-family-primary: Arial, sans-serif;
+  --font-family-brand: "DSG Sans Black", Arial, sans-serif;
+  --color-black: #161313;
+  --color-white: #ffffff;
+  --color-green-100: #d9ffe0;
+  --color-green-500: #006554;
+  --color-red: #d80808;
+  --color-gray-500: #e0dcd9;
+  --color-gray-200: #e7e7e7;
+  --color-gray-100: #f6f5f3;
+  --color-placeholder: #585858;
+  --p-h-primary: 16px;
+  --breakpoint-tablet: 768px;
+  --transition-1: 0.25s;
+  --transition-2: 0.5s;
+}
