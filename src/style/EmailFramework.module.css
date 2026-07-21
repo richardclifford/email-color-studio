@@ -4,12 +4,6 @@
   width: 400px;
 }
 
-.containerEmail img {
-  border-radius: 4px;
-  margin-top: 6px;
-  margin-bottom: 18px;
-}
-
 .containerComponent {
   background-color: var(--color-white);
   padding: 22px var(--p-h-primary) 28px;
@@ -17,6 +11,97 @@
 
 .transparent {
   background-color: transparent;
+}
+
+.imgContainer,
+.imgPlaceholder {
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.imgContainer .imgOverlay {
+  background: linear-gradient(225deg, rgba(0, 0, 0, 0.75) 0%, transparent 15%);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: right;
+  inset: 0;
+  padding: 5px;
+  display: none;
+}
+
+.imgContainer:hover .imgOverlay {
+  display: block;
+}
+
+.btnClose {
+  cursor: pointer;
+  transition: all var(--transition-1) ease;
+}
+
+.imgContainer:hover .btnClose {
+  transform: scale(1);
+  transition: all var(--transition-1) ease;
+}
+
+.imgContainer .btnClose:hover {
+  transform: scale(1.1);
+  transition: all var(--transition-1) ease;
+}
+
+.btnClose .iconRemove {
+  width: 32px;
+  height: 32px;
+  fill: var(--color-white);
+}
+
+.imgPlaceholder {
+  width: 100%;
+  background-color: #f1bedb;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+:global(#product-1x) .imgPlaceholder {
+  aspect-ratio: 88/45;
+}
+
+:global(#product-half) .imgPlaceholder {
+  aspect-ratio: 1/1.75;
+}
+
+.imgPlaceholder .iconUpload {
+  width: 56px;
+  height: auto;
+  fill: #89215c;
+  transition: all var(--transition-2) ease;
+}
+
+.imgPlaceholder:hover .iconUpload {
+  transform: scale(1.2);
+  transition: all var(--transition-2) ease;
+}
+
+:global(#product-2x) .imgContainer,
+:global(#product-2x) .imgPlaceholder {
+  margin-bottom: 14px;
+}
+
+:global(#product-3x) .imgContainer,
+:global(#product-3x) .imgPlaceholder {
+  margin-bottom: 10px;
+}
+
+:global(#events) .imgContainer,
+:global(#events) .imgPlaceholder {
+  margin: 0;
 }
 
 .badge {
@@ -123,18 +208,6 @@ hr {
 .column {
   flex: 1;
   width: 50%;
-}
-
-:global(#product-2x) img {
-  margin-bottom: 14px;
-}
-
-:global(#product-3x) img {
-  margin-bottom: 10px;
-}
-
-:global(#events) img {
-  margin: 0;
 }
 
 :global(#events) .column:first-of-type {

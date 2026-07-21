@@ -5,6 +5,7 @@ import Disclaimer from "../elements/Disclaimer";
 import Headline from "../elements/Headline";
 import Subcopy from "../elements/Subcopy";
 import style from "../../../style/EmailFramework.module.css";
+import ImgUpload from "../elements/ImgUpload";
 
 export default function Product1x({
   isTransparent = false,
@@ -18,12 +19,7 @@ export default function Product1x({
       id="product-1x"
       className={`${style.containerComponent} ${isTransparent ? `${style.transparent}` : ""}`}
     >
-      {hasImg && (
-        <img
-          src="https://placehold.co/1200x800/F1BEDB/000/png?text=Image"
-          alt=""
-        />
-      )}
+      {hasImg && <ImgUpload />}
       <Badge />
       <Headline type="2" />
       <Subcopy isTransparent={isTransparent} />

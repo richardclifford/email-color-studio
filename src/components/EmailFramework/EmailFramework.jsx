@@ -21,6 +21,7 @@ export default function EmailFramework({ colorData }) {
       <Product1x hasImg={false} btnType="tertiary" hasDisclaimer={false} />
       <Spacer />
       <Product1x />
+
       <Product2x />
       <ProductHalf />
       <ProductHalf reverse={true} />

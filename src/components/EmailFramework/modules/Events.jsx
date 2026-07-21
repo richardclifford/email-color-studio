@@ -3,15 +3,13 @@ import BtnContainer from "../elements/BtnContainer";
 import Headline from "../elements/Headline";
 import Subcopy from "../elements/Subcopy";
 import style from "../../../style/EmailFramework.module.css";
+import ImgUpload from "../elements/ImgUpload";
 
 function Event() {
   return (
     <div className={`${style.eventSingle} flex`}>
       <div className={style.column}>
-        <img
-          src="https://placehold.co/180x188/F1BEDB/000/png?text=Image"
-          alt=""
-        />
+        <ImgUpload />
       </div>
       <div className={style.column}>
         <Headline type="4" />

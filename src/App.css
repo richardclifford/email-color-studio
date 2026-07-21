@@ -40,6 +40,10 @@ p {
   flex-direction: row;
 }
 
+.hide {
+  display: none;
+}
+
 .flex {
   display: flex;
 }
@@ -83,16 +87,3 @@ p {
 .gap-3 {
   gap: 24px;
 }
-
-/* 
-
-
-form {
-  width: 100%;
-}
-
-.inputBox {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-} */
