@@ -2,6 +2,7 @@ import { useState, createContext } from "react";
 import "./App.css";
 import EmailFramework from "./components/EmailFramework/EmailFramework";
 import Header from "./components/Header/Header";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 export const CampaignDetailsContext = createContext();
 
@@ -50,6 +51,7 @@ function App() {
       >
         <CampaignDetailsContext.Provider value={contextValue}>
           <EmailFramework colorData={color} />
+          <Sidebar />
         </CampaignDetailsContext.Provider>
       </main>
     </>

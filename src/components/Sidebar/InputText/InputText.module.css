@@ -1,0 +1,46 @@
+@import url("../../../style/variables.css");
+
+label {
+  font-size: 14px;
+}
+
+label:has(+ div input:required)::after {
+  content: " *";
+  color: var(--color-red);
+}
+
+input.inputText {
+  padding: 8px;
+  flex: 1;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+input.inputText:focus {
+  outline: none;
+}
+
+/* input.inputText:user-invalid {
+  border: 1px solid #d80808;
+} */
+
+input.inputText::placeholder {
+  color: var(--color-placeholder);
+  opacity: 1;
+}
+
+.icon {
+  width: 14px;
+}
+
+.inputIcon {
+  position: absolute;
+  width: 14px;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-white);
+  fill: var(--color-red);
+}
