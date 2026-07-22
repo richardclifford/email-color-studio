@@ -12,16 +12,16 @@ export default function StyleContainer({ label, value, onValueChange }) {
         <div className={styles.fieldsetColumn}>
           <label htmlFor="">{label} Card</label>
           <ColorInput
-            name="bg"
-            value={value.bg}
+            name="bgColor"
+            value={value.bgColor}
             onValueChange={onValueChange}
           />
         </div>
         <div className={styles.fieldsetColumn}>
           <ColorInput
-            name="badge"
+            name="badgeColor"
             label={`${label} Badge`}
-            value={value.badge}
+            value={value.badgeColor}
             onValueChange={onValueChange}
           />
         </div>

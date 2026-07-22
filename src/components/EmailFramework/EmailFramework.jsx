@@ -14,7 +14,7 @@ export default function EmailFramework() {
 
   return (
     <div className={style.containerEmail}>
-      <Hero colorData={heroStyles} />
+      <Hero />
       <Product1x
         isTransparent={true}
         hasImg={false}
