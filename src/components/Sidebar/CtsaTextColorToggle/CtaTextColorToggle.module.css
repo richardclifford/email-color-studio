@@ -1,0 +1,50 @@
+.ctaTextContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.ctaTextContainer > label {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+}
+
+.ctaTextContainer fieldset {
+  display: flex;
+  flex-grow: 1;
+  border: 0;
+  padding: 0;
+}
+
+.ctaTextContainer .inputToggle {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #fff;
+  box-shadow: 0 -4px 4px 0 rgba(169, 169, 169, 0.35) inset;
+  flex: 1; /* Makes both inputs fill the container equally */
+  width: 0; /* Ensures equal distribution regardless of content length */
+  padding: 8px; /* Optional: Adds aesthetic spacing inside the input */
+  box-sizing: border-box; /* Ensures padding doesn't break the layout */
+  cursor: pointer;
+}
+
+.ctaTextContainer .inputToggle:hover {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 -4px 4px 0 rgba(169, 169, 169, 0.35) inset,
+    0 4px 4px 0 rgba(175, 175, 175, 0.35) inset;
+}
+
+.ctaTextContainer .inputToggle:has(input[type="radio"]:checked) {
+  border: 2px solid #1db73c;
+}
+
+.ctaTextContainer .inputToggle input {
+  display: none;
+}

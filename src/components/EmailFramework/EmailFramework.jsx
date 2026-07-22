@@ -6,11 +6,15 @@ import Product3x from "./modules/Product3x.jsx";
 import ProductHalf from "./modules/ProductHalf.jsx";
 import Events from "./modules/Events.jsx";
 import style from "../../style/EmailFramework.module.css";
+import { CampaignDetailsContext } from "../../App";
+import { useContext } from "react";
 
-export default function EmailFramework({ colorData }) {
+export default function EmailFramework() {
+  const { color } = useContext(CampaignDetailsContext);
+
   return (
     <div className={style.containerEmail}>
-      <Hero colorData={colorData} />
+      <Hero colorData={color} />
       <Product1x
         isTransparent={true}
         hasImg={false}

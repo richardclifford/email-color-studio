@@ -1,0 +1,48 @@
+.bodyColorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bodyColorContainer > label {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.bodyColorContainer fieldset {
+  display: flex;
+  border: 0;
+  padding: 0;
+}
+
+.bodyColorContainer .inputToggle {
+  font-size: 16px;
+  line-height: 18px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 -4px 4px 0 rgba(169, 169, 169, 0.35) inset;
+  text-align: center;
+  cursor: pointer;
+  flex: 1; /* Makes both inputs fill the container equally */
+  width: 0; /* Ensures equal distribution regardless of content length */
+  padding: 8px; /* Optional: Adds aesthetic spacing inside the input */
+  box-sizing: border-box; /* Ensures padding doesn't break the layout */
+}
+
+.bodyColorContainer .inputToggle:hover {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 -4px 4px 0 rgba(169, 169, 169, 0.35) inset,
+    0 4px 4px 0 rgba(175, 175, 175, 0.35) inset;
+}
+
+.bodyColorContainer .inputToggle:has(input[type="radio"]:checked) {
+  border: 2px solid #1db73c;
+}
+
+.bodyColorContainer .inputToggle input {
+  display: none;
+}
