@@ -1,5 +1,5 @@
-import style from "../../../style/EmailFramework.module.css";
+import styles from "../../../style/EmailFramework.module.css";
 
 export default function BtnContainer({ children }) {
-  return <div className={`${style.btnContainer} flex wrap`}>{children}</div>;
+  return <div className={`${styles.btnContainer} flex wrap`}>{children}</div>;
 }

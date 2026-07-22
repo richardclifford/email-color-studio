@@ -9,14 +9,16 @@ export default function Sidebar() {
   const {
     campaignDetails,
     handleCampaignDetailsChange,
-    color,
-    handleColorChange,
+    emailBg,
+    handleEmailBgChange,
+    heroStyles,
+    handleHeroStylesChange,
   } = useContext(CampaignDetailsContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     alert(
-      `Campaign Name: ${campaignDetails.campaignName}\nOwner: ${campaignDetails.owner} \nContainer BG: ${color.container}`,
+      `Campaign Name: ${campaignDetails.campaignName}\nOwner: ${campaignDetails.owner} \nContainer BG: ${emailBg.containerColor}`,
     );
   };
 
@@ -49,18 +51,19 @@ export default function Sidebar() {
         <div className={styles.row}>
           <div className={styles.column}>
             <ColorInput
+              name="container"
               isInputSolo={true}
               label="Email BG"
-              value={color.container}
-              onValueChange={handleColorChange}
+              value={emailBg.container}
+              onValueChange={handleEmailBgChange}
             />
           </div>
           <div className={styles.column}></div>
         </div>
         <StyleContainer
           label="Hero"
-          value={color.container}
-          onValueChange={handleColorChange}
+          value={heroStyles}
+          onValueChange={handleHeroStylesChange}
         />
         <p>
           Export your theme and share the .txt file with Emily Linner via Teams.

@@ -1,5 +1,5 @@
-import style from "../../../style/EmailFramework.module.css";
+import styles from "../../../style/EmailFramework.module.css";
 
 export default function Spacer() {
-  return <div className={style.spacer}></div>;
+  return <div className={styles.spacer}></div>;
 }

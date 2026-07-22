@@ -10,11 +10,11 @@ import { CampaignDetailsContext } from "../../App";
 import { useContext } from "react";
 
 export default function EmailFramework() {
-  const { color } = useContext(CampaignDetailsContext);
+  const { heroStyles } = useContext(CampaignDetailsContext);
 
   return (
     <div className={style.containerEmail}>
-      <Hero colorData={color} />
+      <Hero colorData={heroStyles} />
       <Product1x
         isTransparent={true}
         hasImg={false}

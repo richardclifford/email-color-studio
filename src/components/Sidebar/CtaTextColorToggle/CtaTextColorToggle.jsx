@@ -1,6 +1,10 @@
 import styles from "./CtaTextColorToggle.module.css";
 
-export default function CtaTextColorToggle() {
+export default function CtaTextColorToggle({
+  name,
+  selectedValue,
+  handleChange,
+}) {
   return (
     <div
       className={`${styles.ctaTextContainer} flex flex-1 flex-row align-center gap-1`}
@@ -10,8 +14,10 @@ export default function CtaTextColorToggle() {
         <label className={`${styles.inputToggle} ${styles.inputToggleActive}`}>
           <input
             type="radio"
-            name="colorScheme"
+            name={name}
             value="light"
+            checked={selectedValue === "light"}
+            onChange={handleChange}
             className="hide"
           />
           Light
@@ -19,10 +25,12 @@ export default function CtaTextColorToggle() {
         <label className={styles.inputToggle}>
           <input
             type="radio"
-            name="colorScheme"
+            name={name}
             value="dark"
+            checked={selectedValue === "dark"}
+            onChange={handleChange}
             className="hide"
-          />{" "}
+          />
           Dark
         </label>
       </fieldset>

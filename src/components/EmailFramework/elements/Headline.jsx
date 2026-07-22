@@ -1,7 +1,7 @@
-import style from "../../../style/EmailFramework.module.css";
+import styles from "../../../style/EmailFramework.module.css";
 
 export default function Headline({ type }) {
-  const headlineType = style[`headline-${type}`];
+  const headlineType = styles[`headline-${type}`];
 
   return (
     <p className={`${headlineType}`}>

@@ -4,7 +4,7 @@ import BtnContainer from "../elements/BtnContainer";
 import Disclaimer from "../elements/Disclaimer";
 import Headline from "../elements/Headline";
 import Subcopy from "../elements/Subcopy";
-import style from "../../../style/EmailFramework.module.css";
+import styles from "../../../style/EmailFramework.module.css";
 import ImgUpload from "../elements/ImgUpload";
 
 export default function Product1x({
@@ -17,7 +17,7 @@ export default function Product1x({
   return (
     <div
       id="product-1x"
-      className={`${style.containerComponent} ${isTransparent ? `${style.transparent}` : ""}`}
+      className={`${styles.containerComponent} ${isTransparent ? `${styles.transparent}` : ""}`}
     >
       {hasImg && <ImgUpload />}
       <Badge />

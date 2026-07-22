@@ -4,19 +4,19 @@ import BtnContainer from "../elements/BtnContainer";
 import Disclaimer from "../elements/Disclaimer";
 import Headline from "../elements/Headline";
 import Subcopy from "../elements/Subcopy";
-import style from "../../../style/EmailFramework.module.css";
+import styles from "../../../style/EmailFramework.module.css";
 import ImgUpload from "../elements/ImgUpload";
 
 export default function ProductHalf({ reverse = false }) {
   return (
     <div
       id="product-half"
-      className={`${style.containerComponent} bg flex gap-8 ${reverse ? "row-reverse" : ""}`}
+      className={`${styles.containerComponent} bg flex gap-8 ${reverse ? "row-reverse" : ""}`}
     >
-      <div className={style.column}>
+      <div className={styles.column}>
         <ImgUpload />
       </div>
-      <div className={`${style.column} flex flex-col justify-center`}>
+      <div className={`${styles.column} flex flex-col justify-center`}>
         <Badge />
         <Headline type="3" />
         <Subcopy bg={"bg"}>Lorem ipsum dolor sit amet, consectetur.</Subcopy>

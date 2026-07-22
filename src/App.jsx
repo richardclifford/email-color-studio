@@ -7,16 +7,26 @@ import Sidebar from "./components/Sidebar/Sidebar";
 export const CampaignDetailsContext = createContext();
 
 function App() {
-  const DEFAULT_COLORS = {
+  const DEFAULT_EMAIL_BG = {
     container: "#F6F5F3",
-    bg: "#FFFFFF",
+  };
+
+  const DEFAULT_HERO_STYLES = {
+    bgColor: "#997224",
+    badgeColor: "#11d828",
+    textColor: "light",
+    primaryCtaBgColor: "#402fa5",
+    primaryCtaTextColor: "dark",
+    secondaryCtaBgColor: "#a8ad09",
+    secondaryCtaTextColor: "light",
   };
 
   const [campaignDetails, setCampaignDetails] = useState({
     campaignName: "",
     owner: "",
   });
-  const [color, setColor] = useState(DEFAULT_COLORS);
+  const [emailBg, setEmailBg] = useState(DEFAULT_EMAIL_BG);
+  const [heroStyles, setHeroStyles] = useState(DEFAULT_HERO_STYLES);
 
   const handleCampaignDetailsChange = (e) => {
     const { name, value } = e.target;
@@ -26,9 +36,16 @@ function App() {
     }));
   };
 
-  const handleColorChange = (e) => {
+  const handleEmailBgChange = (e) => {
     const { name, value } = e.target;
-    setColor((prevState) => ({
+    setEmailBg((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+  const handleHeroStylesChange = (e) => {
+    const { name, value } = e.target;
+    setHeroStyles((prevState) => ({
       ...prevState,
       [name]: value,
     }));
@@ -37,8 +54,10 @@ function App() {
   const contextValue = {
     campaignDetails,
     handleCampaignDetailsChange,
-    color,
-    handleColorChange,
+    emailBg,
+    handleEmailBgChange,
+    heroStyles,
+    handleHeroStylesChange,
   };
 
   return (
@@ -47,7 +66,7 @@ function App() {
       <main
         id="email"
         className="container"
-        style={{ backgroundColor: color.container }}
+        style={{ backgroundColor: emailBg.container }}
       >
         <CampaignDetailsContext.Provider value={contextValue}>
           <EmailFramework />

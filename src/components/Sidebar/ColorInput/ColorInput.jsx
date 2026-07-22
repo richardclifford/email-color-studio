@@ -3,6 +3,7 @@ import styles from "./ColorInput.module.css";
 
 export const ColorInput = ({
   children,
+  name,
   isInputSolo,
   label,
   value,
@@ -17,14 +18,14 @@ export const ColorInput = ({
       <InputContainer hasPadding={true}>
         <input
           type="color"
-          name="container"
+          name={name}
           value={value}
           onChange={onValueChange}
           className="colorInput"
         />
         <input
           type="text"
-          name="container"
+          name={name}
           value={value}
           onChange={onValueChange}
           maxLength={7}

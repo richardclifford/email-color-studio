@@ -9,6 +9,14 @@
   padding: 22px var(--p-h-primary) 28px;
 }
 
+.dark {
+  color: var(--color-black);
+}
+
+.light {
+  color: var(--color-white);
+}
+
 .transparent {
   background-color: transparent;
 }
@@ -185,14 +193,12 @@ hr {
   outline: none;
 }
 
-.btn.primary {
-  color: var(--color-white);
-  background-color: var(--color-black);
+.btn.dark {
+  color: var(--color-black);
 }
 
-.btn.secondary {
-  color: var(--color-black);
-  background-color: var(--color-gray-500);
+.btn.light {
+  color: var(--color-white);
 }
 
 .btn.tertiary {

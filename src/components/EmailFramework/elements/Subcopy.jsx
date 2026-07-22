@@ -1,8 +1,8 @@
-import style from "../../../style/EmailFramework.module.css";
+import styles from "../../../style/EmailFramework.module.css";
 
 export default function Subcopy({ children }) {
   return (
-    <p className={style.subcopy}>
+    <p className={styles.subcopy}>
       {children && children}
       {!children &&
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}

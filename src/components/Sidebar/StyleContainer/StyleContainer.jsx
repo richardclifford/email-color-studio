@@ -11,32 +11,58 @@ export default function StyleContainer({ label, value, onValueChange }) {
       <div className={styles.fieldsetRow}>
         <div className={styles.fieldsetColumn}>
           <label htmlFor="">{label} Card</label>
-          <ColorInput value={value} onValueChange={onValueChange} />
+          <ColorInput
+            name="bg"
+            value={value.bg}
+            onValueChange={onValueChange}
+          />
         </div>
         <div className={styles.fieldsetColumn}>
           <ColorInput
+            name="badge"
             label={`${label} Badge`}
-            value={value}
+            value={value.badge}
             onValueChange={onValueChange}
           />
         </div>
       </div>
       <div className={styles.fieldsetRow}>
         <div className={styles.fieldsetColumn}>
-          <BodyCopyColorToggle />
+          <BodyCopyColorToggle
+            label={label}
+            name="textColor"
+            selectedValue={value.textColor}
+            handleChange={onValueChange}
+          />
         </div>
         <div className={styles.fieldsetColumn}>
           <label htmlFor="">{label} Primary CTA</label>
-          <ColorInput value={value} onValueChange={onValueChange}>
-            <CtaTextColorToggle />
+          <ColorInput
+            name="primaryCtaBgColor"
+            value={value.primaryCtaBgColor}
+            onValueChange={onValueChange}
+          >
+            <CtaTextColorToggle
+              name="primaryCtaTextColor"
+              selectedValue={value.primaryCtaTextColor}
+              handleChange={onValueChange}
+            />
           </ColorInput>
         </div>
       </div>
       <div className={styles.fieldsetRow}>
         <div className={styles.fieldsetColumn}>
           <label htmlFor="">{label} Secondary CTA</label>
-          <ColorInput value={value} onValueChange={onValueChange}>
-            <CtaTextColorToggle />
+          <ColorInput
+            name="secondaryCtaBgColor"
+            value={value.secondaryCtaBgColor}
+            onValueChange={onValueChange}
+          >
+            <CtaTextColorToggle
+              name="secondaryCtaTextColor"
+              selectedValue={value.secondaryCtaTextColor}
+              handleChange={onValueChange}
+            />
           </ColorInput>
         </div>
         <div className={styles.fieldsetColumn}></div>

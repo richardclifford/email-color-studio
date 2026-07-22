@@ -1,10 +1,13 @@
-import style from "../../../style/EmailFramework.module.css";
+import styles from "../../../style/EmailFramework.module.css";
 
-export default function Btn({ type = "secondary", label }) {
-  const btnClass = style[`${type}`];
+export default function Btn({ type = "secondary", label, bgColor, textColor }) {
+  const btnClass = styles[`${type}`];
 
   return (
-    <button className={`${style.btn} ${btnClass}`}>
+    <button
+      className={`${styles.btn} ${btnClass} ${styles[textColor]}`}
+      style={{ backgroundColor: bgColor }}
+    >
       {label ? label : "Lorem"}
     </button>
   );
