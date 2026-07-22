@@ -4,7 +4,6 @@ import styles from "../../../style/EmailFramework.module.css";
 
 export default function ImgUpload() {
   const [imgUpload, setImgUpload] = useState(null);
-  // Reference to  hidden img input element
   const fileInputRef = useRef(null);
 
   const handleBoxClick = () => {
@@ -16,7 +15,6 @@ export default function ImgUpload() {
     if (file && file.type.startsWith("image/")) {
       const previewUrl = URL.createObjectURL(file);
       setImgUpload(previewUrl);
-      console.log(imgUpload);
     }
   };
 

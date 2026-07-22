@@ -50,7 +50,7 @@ function App() {
         style={{ backgroundColor: color.container }}
       >
         <CampaignDetailsContext.Provider value={contextValue}>
-          <EmailFramework colorData={color} />
+          <EmailFramework />
           <Sidebar />
         </CampaignDetailsContext.Provider>
       </main>

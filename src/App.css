@@ -48,6 +48,10 @@ p {
   display: flex;
 }
 
+.flex-1 {
+  flex: 1;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -62,6 +66,10 @@ p {
 
 .gap-8 {
   gap: 8px;
+}
+
+.gap-16 {
+  gap: 16px;
 }
 
 .align-center {

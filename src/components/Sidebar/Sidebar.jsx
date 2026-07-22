@@ -3,6 +3,7 @@ import InputText from "./InputText/InputText";
 import styles from "./Sidebar.module.css";
 import { CampaignDetailsContext } from "../../App";
 import ColorInput from "./ColorInput/ColorInput";
+import StyleContainer from "./StyleContainer/StyleContainer";
 
 export default function Sidebar() {
   const {
@@ -48,12 +49,19 @@ export default function Sidebar() {
         <div className={styles.row}>
           <div className={styles.column}>
             <ColorInput
+              isInputSolo={true}
+              label="Email BG"
               value={color.container}
               onValueChange={handleColorChange}
             />
           </div>
           <div className={styles.column}></div>
         </div>
+        <StyleContainer
+          label="Hero"
+          value={color.container}
+          onValueChange={handleColorChange}
+        />
         <p>
           Export your theme and share the .txt file with Emily Linner via Teams.
           Your theme will be converted to a campaign one-sheeter and shared with

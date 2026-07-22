@@ -12,13 +12,9 @@ export default function Hero({ colorData }) {
     <div
       id="hero"
       className={`${style.containerComponent} ${style.bg}`}
-      style={{ backgroundColor: colorData.bg }}
+      // style={{ backgroundColor: colorData.container }}
     >
       <ImgUpload />
-      {/* <img
-        src="https://placehold.co/1200x1200/F1BEDB/000/png?text=Image"
-        alt=""
-      /> */}
       <Badge />
       <Headline type="1" />
       <Subcopy />

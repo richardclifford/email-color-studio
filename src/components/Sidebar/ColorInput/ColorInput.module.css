@@ -1,6 +1,12 @@
 .label {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.label.headline {
   font-size: 20px;
-  line-height: 24px;
+  line-height: 22px;
   font-weight: 700;
 }
 
@@ -20,11 +26,9 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 input[type="color"]::-webkit-color-swatch {
   border: none;
   border-radius: 50%;
-  /* border: 3px solid #000; */
 }
 
 .textColorInput {
-  flex: 1;
   border: none;
   text-transform: uppercase;
   background-color: transparent;
