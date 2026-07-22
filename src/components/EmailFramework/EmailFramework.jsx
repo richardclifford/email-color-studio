@@ -5,15 +5,11 @@ import Product2x from "./modules/Product2x.jsx";
 import Product3x from "./modules/Product3x.jsx";
 import ProductHalf from "./modules/ProductHalf.jsx";
 import Events from "./modules/Events.jsx";
-import style from "../../style/EmailFramework.module.css";
-import { CampaignDetailsContext } from "../../App";
-import { useContext } from "react";
+import styles from "../../style/EmailFramework.module.css";
 
 export default function EmailFramework() {
-  const { heroStyles } = useContext(CampaignDetailsContext);
-
   return (
-    <div className={style.containerEmail}>
+    <div className={styles.containerEmail}>
       <Hero />
       <Product1x
         isTransparent={true}

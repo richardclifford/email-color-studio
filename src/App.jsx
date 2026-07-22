@@ -12,13 +12,22 @@ function App() {
   };
 
   const DEFAULT_HERO_STYLES = {
-    bgColor: "#997224",
-    badgeColor: "#11d828",
+    type: "hero",
+    bgColor: "#FFFFFF",
+    badgeColor: "#161313",
     textColor: "light",
-    primaryCtaBgColor: "#402fa5",
-    primaryCtaTextColor: "dark",
+    primaryCtaBgColor: "#161313",
+    primaryCtaTextColor: "light",
     secondaryCtaBgColor: "#a8ad09",
-    secondaryCtaTextColor: "light",
+    secondaryCtaTextColor: "dark",
+  };
+
+  const DEFAULT_SECONDARY_STYLES = {
+    bgColor: "#d73993",
+    badgeColor: "#e4916a",
+    SubTextColor: "dark",
+    subSecondaryCtaBgColor: "#1c76d6",
+    subSecondaryCtaTextColor: "dark",
   };
 
   const [campaignDetails, setCampaignDetails] = useState({
@@ -27,6 +36,9 @@ function App() {
   });
   const [emailBg, setEmailBg] = useState(DEFAULT_EMAIL_BG);
   const [heroStyles, setHeroStyles] = useState(DEFAULT_HERO_STYLES);
+  const [secondaryStyles, setSecondaryStyles] = useState(
+    DEFAULT_SECONDARY_STYLES,
+  );
 
   const handleCampaignDetailsChange = (e) => {
     const { name, value } = e.target;
@@ -43,12 +55,27 @@ function App() {
       [name]: value,
     }));
   };
+
   const handleHeroStylesChange = (e) => {
     const { name, value } = e.target;
     setHeroStyles((prevState) => ({
       ...prevState,
       [name]: value,
     }));
+  };
+
+  const handleSecondaryStylesChange = (e) => {
+    const { name, value } = e.target;
+    setSecondaryStyles((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleReset = () => {
+    (setEmailBg(DEFAULT_EMAIL_BG),
+      setHeroStyles(DEFAULT_HERO_STYLES),
+      setSecondaryStyles(DEFAULT_SECONDARY_STYLES));
   };
 
   const contextValue = {
@@ -58,6 +85,9 @@ function App() {
     handleEmailBgChange,
     heroStyles,
     handleHeroStylesChange,
+    secondaryStyles,
+    handleSecondaryStylesChange,
+    handleReset,
   };
 
   return (

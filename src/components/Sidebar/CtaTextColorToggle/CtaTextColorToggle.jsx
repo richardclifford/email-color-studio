@@ -10,7 +10,7 @@ export default function CtaTextColorToggle({
       className={`${styles.ctaTextContainer} flex flex-1 flex-row align-center gap-1`}
     >
       <label>Text</label>
-      <fieldset className="flex flex-1">
+      <fieldset className="flex flex-1 gap-1">
         <label className={`${styles.inputToggle} ${styles.inputToggleActive}`}>
           <input
             type="radio"

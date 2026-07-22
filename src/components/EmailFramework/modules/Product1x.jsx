@@ -1,11 +1,13 @@
+import { useContext } from "react";
+import { CampaignDetailsContext } from "../../../App";
 import Badge from "../elements/Badge";
 import Btn from "../elements/Btn";
 import BtnContainer from "../elements/BtnContainer";
 import Disclaimer from "../elements/Disclaimer";
 import Headline from "../elements/Headline";
 import Subcopy from "../elements/Subcopy";
-import styles from "../../../style/EmailFramework.module.css";
 import ImgUpload from "../elements/ImgUpload";
+import styles from "../../../style/EmailFramework.module.css";
 
 export default function Product1x({
   isTransparent = false,
@@ -14,23 +16,55 @@ export default function Product1x({
   hasDisclaimer = true,
   btnType = "secondary",
 }) {
+  const { secondaryStyles } = useContext(CampaignDetailsContext);
+
   return (
     <div
       id="product-1x"
-      className={`${styles.containerComponent} ${isTransparent ? `${styles.transparent}` : ""}`}
+      className={`${styles.containerComponent} ${styles[secondaryStyles.textColor]} ${isTransparent ? `${styles.transparent}` : ""}`}
+      style={{ backgroundColor: !isTransparent ? secondaryStyles.bgColor : "" }}
     >
       {hasImg && <ImgUpload />}
-      <Badge />
+      <Badge color={secondaryStyles.badgeColor} />
       <Headline type="2" />
       <Subcopy isTransparent={isTransparent} />
       {hasCta && (
         <BtnContainer>
-          <Btn type={btnType} />
-          <Btn type={btnType} label="Ipsum" />
-          <Btn type={btnType} label="Dolor" />
-          <Btn type={btnType} label="Sit" />
-          <Btn type={btnType} label="Amet" />
-          <Btn type={btnType} label="Consectetur" />
+          <Btn
+            type={btnType}
+            bgColor={secondaryStyles.secondaryCtaBgColor}
+            textColor={secondaryStyles.secondaryCtaTextColor}
+          />
+          <Btn
+            type={btnType}
+            bgColor={secondaryStyles.secondaryCtaBgColor}
+            textColor={secondaryStyles.secondaryCtaTextColor}
+            label="Ipsum"
+          />
+          <Btn
+            type={btnType}
+            bgColor={secondaryStyles.secondaryCtaBgColor}
+            textColor={secondaryStyles.secondaryCtaTextColor}
+            label="Dolor"
+          />
+          <Btn
+            type={btnType}
+            bgColor={secondaryStyles.secondaryCtaBgColor}
+            textColor={secondaryStyles.secondaryCtaTextColor}
+            label="Sit"
+          />
+          <Btn
+            type={btnType}
+            bgColor={secondaryStyles.secondaryCtaBgColor}
+            textColor={secondaryStyles.secondaryCtaTextColor}
+            label="Amet"
+          />
+          <Btn
+            type={btnType}
+            bgColor={secondaryStyles.secondaryCtaBgColor}
+            textColor={secondaryStyles.secondaryCtaTextColor}
+            label="Consectetur"
+          />
         </BtnContainer>
       )}
       {hasDisclaimer && <Disclaimer />}

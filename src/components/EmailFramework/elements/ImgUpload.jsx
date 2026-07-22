@@ -35,7 +35,11 @@ export default function ImgUpload() {
         <div className={styles.imgContainer}>
           <img src={imgUpload} alt="Preview" />
           <div className={styles.imgOverlay}>
-            <button onClick={handleImageRemove} className={styles.btnClose}>
+            <button
+              onClick={handleImageRemove}
+              aria-label="Remove image"
+              className={styles.btnClose}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 640"
@@ -47,7 +51,7 @@ export default function ImgUpload() {
           </div>
         </div>
       ) : (
-        <div onClick={handleBoxClick}>
+        <div onClick={handleBoxClick} aria-label="Upload image">
           <div
             className={`${styles.imgPlaceholder} flex align-center justify-center`}
           >

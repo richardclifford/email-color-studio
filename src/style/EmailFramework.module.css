@@ -42,32 +42,36 @@
   text-align: right;
   inset: 0;
   padding: 5px;
-  display: none;
+  visibility: hidden;
 }
 
 .imgContainer:hover .imgOverlay {
-  display: block;
+  visibility: visible;
 }
 
 .btnClose {
   cursor: pointer;
-  transition: all var(--transition-1) ease;
+  transform: scale(0);
+  opacity: 0;
+  transition: all var(--transition-2) ease;
 }
 
 .imgContainer:hover .btnClose {
   transform: scale(1);
-  transition: all var(--transition-1) ease;
+  opacity: 1;
+  transition: all var(--transition-2) ease;
 }
 
 .imgContainer .btnClose:hover {
   transform: scale(1.1);
-  transition: all var(--transition-1) ease;
+  transition: all var(--transition-2) ease;
 }
 
 .btnClose .iconRemove {
   width: 32px;
   height: 32px;
   fill: var(--color-white);
+  transition: all var(--transition-1) ease;
 }
 
 .imgPlaceholder {
@@ -202,8 +206,6 @@ hr {
 }
 
 .btn.tertiary {
-  color: var(--color-black);
-  background-color: var(--color-gray-100);
   border-radius: 180px;
 }
 

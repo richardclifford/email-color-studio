@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { CampaignDetailsContext } from "../../../App";
 import Badge from "../elements/Badge";
 import Btn from "../elements/Btn";
 import BtnContainer from "../elements/BtnContainer";
@@ -6,8 +8,6 @@ import Headline from "../elements/Headline";
 import Subcopy from "../elements/Subcopy";
 import styles from "../../../style/EmailFramework.module.css";
 import ImgUpload from "../elements/ImgUpload";
-import { CampaignDetailsContext } from "../../../App";
-import { useContext } from "react";
 
 export default function Hero() {
   const { heroStyles } = useContext(CampaignDetailsContext);
@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className={`${styles.containerComponent} ${styles[heroStyles.textColor]} `}
+      className={`${styles.containerComponent} ${styles[heroStyles.textColor]}`}
       style={{ backgroundColor: heroStyles.bgColor }}
     >
       <ImgUpload />
