@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { CampaignDetailsContext } from "../../App";
 import Hero from "./modules/Hero.jsx";
 import Spacer from "./modules/Spacer.jsx";
 import Product1x from "./modules/Product1x.jsx";
@@ -8,8 +10,14 @@ import Events from "./modules/Events.jsx";
 import styles from "../../style/EmailFramework.module.css";
 
 export default function EmailFramework() {
+  const { emailRef, emailBg } = useContext(CampaignDetailsContext);
+
   return (
-    <div className={styles.containerEmail}>
+    <div
+      className={styles.containerEmail}
+      ref={emailRef}
+      style={{ backgroundColor: emailBg.container }}
+    >
       <Hero />
       <Product1x
         isTransparent={true}

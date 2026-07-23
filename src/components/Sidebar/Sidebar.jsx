@@ -1,7 +1,7 @@
 import { useContext } from "react";
+import { CampaignDetailsContext } from "../../App";
 import InputText from "./InputText/InputText";
 import styles from "./Sidebar.module.css";
-import { CampaignDetailsContext } from "../../App";
 import ColorInput from "./ColorInput/ColorInput";
 import HeroStyleContainer from "./StyleContainers/HeroStyleContainer";
 import SubStyleContainer from "./StyleContainers/SubStyleContainer";
@@ -16,14 +16,10 @@ export default function Sidebar() {
     handleHeroStylesChange,
     subStyles,
     handleSubStylesChange,
+    // emailRef,
+    handleSubmit,
+    // handleExport,
   } = useContext(CampaignDetailsContext);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert(
-      `Campaign Name: ${campaignDetails.campaignName}\nOwner: ${campaignDetails.owner} \nContainer BG: ${emailBg.containerColor}`,
-    );
-  };
 
   return (
     <div className={`${styles.sidebar}`}>
