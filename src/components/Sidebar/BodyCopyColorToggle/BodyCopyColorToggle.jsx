@@ -8,7 +8,7 @@ export default function BodyCopyColorToggle({
 }) {
   return (
     <div className={styles.bodyColorContainer}>
-      <label>{label} Body Copy</label>
+      <label>{label}</label>
       <fieldset style={{ display: "flex", gap: "6px" }}>
         <label className={`${styles.inputToggle} ${styles.inputToggleActive}`}>
           <input
@@ -17,6 +17,7 @@ export default function BodyCopyColorToggle({
             value="light"
             checked={selectedValue === "light"}
             onChange={handleChange}
+            className="hide"
           />
           Light
         </label>
@@ -27,7 +28,8 @@ export default function BodyCopyColorToggle({
             value="dark"
             checked={selectedValue === "dark"}
             onChange={handleChange}
-          />{" "}
+            className="hide"
+          />
           Dark
         </label>
       </fieldset>

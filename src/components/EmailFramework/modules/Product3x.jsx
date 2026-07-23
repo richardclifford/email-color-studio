@@ -16,13 +16,13 @@ function ProductSingle() {
 }
 
 export default function Product3x() {
-  const { secondaryStyles } = useContext(CampaignDetailsContext);
+  const { subStyles } = useContext(CampaignDetailsContext);
 
   return (
     <div
       id="product-3x"
-      className={`${styles.containerComponent} ${styles[secondaryStyles.textColor]} bg flex gap-8`}
-      style={{ backgroundColor: secondaryStyles.bgColor }}
+      className={`${styles.containerComponent} ${styles[subStyles.subBodyTextColor]} bg flex gap-8`}
+      style={{ backgroundColor: subStyles.bgColor }}
     >
       <ProductSingle />
       <ProductSingle />

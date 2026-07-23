@@ -3,7 +3,8 @@ import InputText from "./InputText/InputText";
 import styles from "./Sidebar.module.css";
 import { CampaignDetailsContext } from "../../App";
 import ColorInput from "./ColorInput/ColorInput";
-import StyleContainer from "./StyleContainer/StyleContainer";
+import HeroStyleContainer from "./StyleContainers/HeroStyleContainer";
+import SubStyleContainer from "./StyleContainers/SubStyleContainer";
 
 export default function Sidebar() {
   const {
@@ -13,6 +14,8 @@ export default function Sidebar() {
     handleEmailBgChange,
     heroStyles,
     handleHeroStylesChange,
+    subStyles,
+    handleSubStylesChange,
   } = useContext(CampaignDetailsContext);
 
   const handleSubmit = (event) => {
@@ -60,10 +63,15 @@ export default function Sidebar() {
           </div>
           <div className={styles.column}></div>
         </div>
-        <StyleContainer
+        <HeroStyleContainer
           label="Hero"
           value={heroStyles}
           onValueChange={handleHeroStylesChange}
+        />
+        <SubStyleContainer
+          label="Sub"
+          value={subStyles}
+          onValueChange={handleSubStylesChange}
         />
         <p>
           Export your theme and share the .txt file with Emily Linner via Teams.

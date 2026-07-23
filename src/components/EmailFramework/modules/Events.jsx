@@ -22,13 +22,13 @@ function Event() {
 }
 
 export default function Events() {
-  const { secondaryStyles } = useContext(CampaignDetailsContext);
+  const { subStyles } = useContext(CampaignDetailsContext);
 
   return (
     <div
       id="events"
-      className={`${styles.containerComponent} ${styles[secondaryStyles.textColor]} flex flex-col gap-8 `}
-      style={{ backgroundColor: secondaryStyles.bgColor }}
+      className={`${styles.containerComponent} ${styles[subStyles.subBodyTextColor]} flex flex-col gap-8 `}
+      style={{ backgroundColor: subStyles.bgColor }}
     >
       <Headline type="2" />
       <Event />
@@ -36,8 +36,8 @@ export default function Events() {
       <Event />
       <BtnContainer>
         <Btn
-          bgColor={secondaryStyles.secondaryCtaBgColor}
-          textColor={secondaryStyles.secondaryCtaTextColor}
+          bgColor={subStyles.secondaryCtaBgColor}
+          textColor={subStyles.secondaryCtaTextColor}
           label="Lorem ipsum"
         />
       </BtnContainer>

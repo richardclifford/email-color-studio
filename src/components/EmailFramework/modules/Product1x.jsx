@@ -16,53 +16,53 @@ export default function Product1x({
   hasDisclaimer = true,
   btnType = "secondary",
 }) {
-  const { secondaryStyles } = useContext(CampaignDetailsContext);
+  const { subStyles } = useContext(CampaignDetailsContext);
 
   return (
     <div
       id="product-1x"
-      className={`${styles.containerComponent} ${styles[secondaryStyles.textColor]} ${isTransparent ? `${styles.transparent}` : ""}`}
-      style={{ backgroundColor: !isTransparent ? secondaryStyles.bgColor : "" }}
+      className={`${styles.containerComponent} ${styles[subStyles.subBodyTextColor]} ${isTransparent ? `${styles.transparent}` : ""}`}
+      style={{ backgroundColor: !isTransparent ? subStyles.bgColor : "" }}
     >
       {hasImg && <ImgUpload />}
-      <Badge color={secondaryStyles.badgeColor} />
+      <Badge color={subStyles.badgeColor} />
       <Headline type="2" />
       <Subcopy isTransparent={isTransparent} />
       {hasCta && (
         <BtnContainer>
           <Btn
             type={btnType}
-            bgColor={secondaryStyles.secondaryCtaBgColor}
-            textColor={secondaryStyles.secondaryCtaTextColor}
+            bgColor={subStyles.secondaryCtaBgColor}
+            textColor={subStyles.secondaryCtaTextColor}
           />
           <Btn
             type={btnType}
-            bgColor={secondaryStyles.secondaryCtaBgColor}
-            textColor={secondaryStyles.secondaryCtaTextColor}
+            bgColor={subStyles.secondaryCtaBgColor}
+            textColor={subStyles.secondaryCtaTextColor}
             label="Ipsum"
           />
           <Btn
             type={btnType}
-            bgColor={secondaryStyles.secondaryCtaBgColor}
-            textColor={secondaryStyles.secondaryCtaTextColor}
+            bgColor={subStyles.secondaryCtaBgColor}
+            textColor={subStyles.secondaryCtaTextColor}
             label="Dolor"
           />
           <Btn
             type={btnType}
-            bgColor={secondaryStyles.secondaryCtaBgColor}
-            textColor={secondaryStyles.secondaryCtaTextColor}
+            bgColor={subStyles.secondaryCtaBgColor}
+            textColor={subStyles.secondaryCtaTextColor}
             label="Sit"
           />
           <Btn
             type={btnType}
-            bgColor={secondaryStyles.secondaryCtaBgColor}
-            textColor={secondaryStyles.secondaryCtaTextColor}
+            bgColor={subStyles.secondaryCtaBgColor}
+            textColor={subStyles.secondaryCtaTextColor}
             label="Amet"
           />
           <Btn
             type={btnType}
-            bgColor={secondaryStyles.secondaryCtaBgColor}
-            textColor={secondaryStyles.secondaryCtaTextColor}
+            bgColor={subStyles.secondaryCtaBgColor}
+            textColor={subStyles.secondaryCtaTextColor}
             label="Consectetur"
           />
         </BtnContainer>

@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className={`${styles.containerComponent} ${styles[heroStyles.textColor]}`}
+      className={`${styles.containerComponent} ${styles[heroStyles.heroBodyTextColor]}`}
       style={{ backgroundColor: heroStyles.bgColor }}
     >
       <ImgUpload />

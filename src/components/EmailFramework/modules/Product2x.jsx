@@ -10,7 +10,7 @@ import ImgUpload from "../elements/ImgUpload";
 import styles from "../../../style/EmailFramework.module.css";
 
 function ProductSingle() {
-  const { secondaryStyles } = useContext(CampaignDetailsContext);
+  const { subStyles } = useContext(CampaignDetailsContext);
 
   return (
     <div className={`${styles.column} flex flex-col`}>
@@ -20,8 +20,8 @@ function ProductSingle() {
       <Subcopy bg={"bg"}>Lorem ipsum dolor sit amet, consectetur.</Subcopy>
       <BtnContainer>
         <Btn
-          bgColor={secondaryStyles.secondaryCtaBgColor}
-          textColor={secondaryStyles.secondaryCtaTextColor}
+          bgColor={subStyles.secondaryCtaBgColor}
+          textColor={subStyles.secondaryCtaTextColor}
         />
       </BtnContainer>
       <Disclaimer text="Excepteur sint occaecat cupidatat non proident." />
@@ -30,13 +30,13 @@ function ProductSingle() {
 }
 
 export default function Product2x() {
-  const { secondaryStyles } = useContext(CampaignDetailsContext);
+  const { subStyles } = useContext(CampaignDetailsContext);
 
   return (
     <div
       id="product-2x"
-      className={`${styles.containerComponent} ${styles[secondaryStyles.textColor]} bg flex gap-8`}
-      style={{ backgroundColor: secondaryStyles.bgColor }}
+      className={`${styles.containerComponent} ${styles[subStyles.subBodyTextColor]} bg flex gap-8`}
+      style={{ backgroundColor: subStyles.bgColor }}
     >
       <ProductSingle />
       <ProductSingle />

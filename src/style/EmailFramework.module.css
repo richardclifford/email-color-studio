@@ -81,14 +81,6 @@
   cursor: pointer;
 }
 
-:global(#product-1x) .imgPlaceholder {
-  aspect-ratio: 88/45;
-}
-
-:global(#product-half) .imgPlaceholder {
-  aspect-ratio: 1/1.75;
-}
-
 .imgPlaceholder .iconUpload {
   width: 56px;
   height: auto;
@@ -99,6 +91,14 @@
 .imgPlaceholder:hover .iconUpload {
   transform: scale(1.2);
   transition: all var(--transition-2) ease;
+}
+
+:global(#product-1x) .imgPlaceholder {
+  aspect-ratio: 88/45;
+}
+
+:global(#product-half) .imgPlaceholder {
+  aspect-ratio: 1/1.75;
 }
 
 :global(#product-2x) .imgContainer,
