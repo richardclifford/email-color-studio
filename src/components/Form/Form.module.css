@@ -1,27 +1,6 @@
 @import url("../../style/variables.css");
 
-.sidebar {
-  width: 500px;
-  height: fit-content;
-  margin-top: 15px;
-  padding: 24px;
-  position: -webkit-sticky; /* Safari  */
-  position: sticky;
-  top: 20px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
-  max-height: calc(100vh - 40px);
-  overflow-y: auto;
-}
-
-.sidebar p {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 400;
-}
-
-.sidebar button.export {
+button.export {
   display: flex;
   gap: 6px;
   background-color: var(--color-white);
@@ -34,14 +13,14 @@
   transition: all var(--transition-1) ease;
 }
 
-.sidebar button.export:hover {
+button.export:hover {
   box-shadow:
     0 4px 0 0 var(--color-btn-border),
     0 -4px 4px 0 rgba(175, 175, 175, 0.35) inset;
   transition: all var(--transition-1) ease;
 }
 
-.sidebar button.export:active {
+button.export:active {
   transform: translateY(4px);
   box-shadow:
     0 0 0 0 var(--color-btn-border),
@@ -50,11 +29,11 @@
 }
 
 button.export:disabled {
-  opacity: 0.75;
+  opacity: 1;
   cursor: progress;
 }
 
-span.spinner {
+.spinner {
   height: 16px !important;
   width: 16px !important;
   border-radius: 999px;
@@ -67,16 +46,4 @@ span.spinner {
   to {
     transform: rotate(360deg);
   }
-}
-
-.sidebar button.reset {
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-.sidebar button.reset:hover {
-  color: var(--color-red);
-  transition: color var(--transition-1) ease;
 }

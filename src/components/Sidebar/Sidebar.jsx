@@ -8,6 +8,7 @@ import ColorInput from "../Form/ColorInput/ColorInput";
 import BodyCopyColorToggle from "../Form/BodyCopyColorToggle/BodyCopyColorToggle";
 import CtaTextColorToggle from "../Form/CtaTextColorToggle/CtaTextColorToggle";
 import InputText from "../Form/InputText/InputText";
+import ExportBtn from "../Form/ExportBtn";
 
 export default function Sidebar() {
   const {
@@ -212,15 +213,15 @@ export default function Sidebar() {
             <Column></Column>
           </Row>
         </LayoutContainer>
-
         <p>
           Export your theme and share the .txt file with Emily Linner via Teams.
           Your theme will be converted to a campaign one-sheeter and shared with
           the team.
         </p>
-        <button type="submit" className={styles.export}>
+        <ExportBtn />
+        {/* <button type="submit" className={styles.export}>
           Export Theme
-        </button>
+        </button> */}
         <button type="reset" onClick={handleReset} className={styles.reset}>
           Reset to Default Colors
         </button>

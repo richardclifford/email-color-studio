@@ -42,6 +42,7 @@ function App() {
   const [emailBg, setEmailBg] = useState(DEFAULT_EMAIL_BG);
   const [heroStyles, setHeroStyles] = useState(DEFAULT_HERO_STYLES);
   const [subStyles, setSubStyles] = useState(DEFAULT_SUB_STYLES);
+  const [isLoading, setIsLoading] = useState(false);
 
   const emailRef = useRef();
 
@@ -90,6 +91,8 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    setIsLoading(true);
+
     const fileContent =
       `--- Campaign Lead Information ---\n\n` +
       `Details:\n` +
@@ -130,6 +133,10 @@ function App() {
 
     // capture/download screenshot
     handleScreenshotCapture();
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
   };
 
   const handleReset = () => {
@@ -150,6 +157,7 @@ function App() {
     emailRef,
     handleSubmit,
     handleReset,
+    isLoading,
   };
 
   return (
