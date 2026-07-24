@@ -26,9 +26,13 @@ function App() {
   const DEFAULT_SUB_STYLES = {
     bgColor: "#FFFFFF",
     badgeColor: "#161313",
+    transitionBadgeColor: "#161313",
+    transitionBodyTextColor: "dark",
     subBodyTextColor: "dark",
-    secondaryCtaBgColor: "#E0DCD9",
-    secondaryCtaTextColor: "dark",
+    subSecondaryCtaBgColor: "#E0DCD9",
+    subSecondaryCtaTextColor: "dark",
+    tertiaryCtaBgColor: "#E0DCD9",
+    tertiaryCtaTextColor: "dark",
   };
 
   const [campaignDetails, setCampaignDetails] = useState({

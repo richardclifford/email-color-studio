@@ -36,8 +36,8 @@ export default function Events() {
       <Event />
       <BtnContainer>
         <Btn
-          bgColor={subStyles.secondaryCtaBgColor}
-          textColor={subStyles.secondaryCtaTextColor}
+          bgColor={subStyles.subSecondaryCtaBgColor}
+          textColor={subStyles.subSecondaryCtaTextColor}
           label="Lorem ipsum"
         />
       </BtnContainer>

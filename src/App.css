@@ -64,6 +64,10 @@ p {
   flex-wrap: wrap;
 }
 
+.gap-6 {
+  gap: 6px;
+}
+
 .gap-8 {
   gap: 8px;
 }
@@ -98,4 +102,22 @@ p {
 
 .gap-3 {
   gap: 24px;
+}
+
+label,
+legend {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+fieldset {
+  display: flex;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset legend {
+  margin-bottom: 8px;
 }

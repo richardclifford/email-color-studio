@@ -17,11 +17,11 @@ function ProductSingle() {
       <ImgUpload />
       <Badge />
       <Headline type="3" />
-      <Subcopy bg={"bg"}>Lorem ipsum dolor sit amet, consectetur.</Subcopy>
+      <Subcopy bg={"bg"}>Lorem ipsum dolor sit amet, consubSectetur.</Subcopy>
       <BtnContainer>
         <Btn
-          bgColor={subStyles.secondaryCtaBgColor}
-          textColor={subStyles.secondaryCtaTextColor}
+          bgColor={subStyles.subSecondaryCtaBgColor}
+          textColor={subStyles.subSecondaryCtaTextColor}
         />
       </BtnContainer>
       <Disclaimer text="Excepteur sint occaecat cupidatat non proident." />

@@ -1,18 +1,20 @@
 import styles from "./BodyCopyColorToggle.module.css";
 
 export default function BodyCopyColorToggle({
+  // id,
   label,
   name,
   selectedValue,
   handleChange,
 }) {
   return (
-    <div className={styles.bodyColorContainer}>
-      <label>{label}</label>
-      <fieldset style={{ display: "flex", gap: "6px" }}>
+    <fieldset className={`${styles.bodyColorContainer} flex flex-col gap-8`}>
+      <legend>{label}</legend>
+      <div className="flex gap-6">
         <label className={`${styles.inputToggle} ${styles.inputToggleActive}`}>
           <input
             type="radio"
+            id={`${name}-light`}
             name={name}
             value="light"
             checked={selectedValue === "light"}
@@ -21,9 +23,10 @@ export default function BodyCopyColorToggle({
           />
           Light
         </label>
-        <label className={styles.inputToggle}>
+        <label className={`${styles.inputToggle} ${styles.inputToggleActive}`}>
           <input
             type="radio"
+            id={`${name}-dark`}
             name={name}
             value="dark"
             checked={selectedValue === "dark"}
@@ -32,7 +35,7 @@ export default function BodyCopyColorToggle({
           />
           Dark
         </label>
-      </fieldset>
-    </div>
+      </div>
+    </fieldset>
   );
 }

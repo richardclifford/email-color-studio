@@ -14,56 +14,108 @@ export default function Product1x({
   hasImg = true,
   hasCta = true,
   hasDisclaimer = true,
-  btnType = "secondary",
+  btnType = "subSecondary",
 }) {
   const { subStyles } = useContext(CampaignDetailsContext);
 
   return (
     <div
       id="product-1x"
-      className={`${styles.containerComponent} ${styles[subStyles.subBodyTextColor]} ${isTransparent ? `${styles.transparent}` : ""}`}
+      className={`${styles.containerComponent} ${isTransparent ? styles[subStyles.transitionBodyTextColor] : styles[subStyles.subBodyTextColor]} ${isTransparent ? `${styles.transparent}` : ""}`}
       style={{ backgroundColor: !isTransparent ? subStyles.bgColor : "" }}
     >
       {hasImg && <ImgUpload />}
-      <Badge color={subStyles.badgeColor} />
+      <Badge
+        color={
+          isTransparent ? subStyles.transitionBadgeColor : subStyles.badgeColor
+        }
+      />
       <Headline type="2" />
       <Subcopy isTransparent={isTransparent} />
       {hasCta && (
         <BtnContainer>
           <Btn
             type={btnType}
-            bgColor={subStyles.secondaryCtaBgColor}
-            textColor={subStyles.secondaryCtaTextColor}
+            bgColor={
+              btnType === "tertiary"
+                ? subStyles.tertiaryCtaBgColor
+                : subStyles.subSecondaryCtaBgColor
+            }
+            textColor={
+              btnType === "tertiary"
+                ? subStyles.tertiaryCtaTextColor
+                : subStyles.subSecondaryCtaTextColor
+            }
           />
           <Btn
             type={btnType}
-            bgColor={subStyles.secondaryCtaBgColor}
-            textColor={subStyles.secondaryCtaTextColor}
+            bgColor={
+              btnType === "tertiary"
+                ? subStyles.tertiaryCtaBgColor
+                : subStyles.subSecondaryCtaBgColor
+            }
+            textColor={
+              btnType === "tertiary"
+                ? subStyles.tertiaryCtaTextColor
+                : subStyles.subSecondaryCtaTextColor
+            }
             label="Ipsum"
           />
           <Btn
             type={btnType}
-            bgColor={subStyles.secondaryCtaBgColor}
-            textColor={subStyles.secondaryCtaTextColor}
+            bgColor={
+              btnType === "tertiary"
+                ? subStyles.tertiaryCtaBgColor
+                : subStyles.subSecondaryCtaBgColor
+            }
+            textColor={
+              btnType === "tertiary"
+                ? subStyles.tertiaryCtaTextColor
+                : subStyles.subSecondaryCtaTextColor
+            }
             label="Dolor"
           />
           <Btn
             type={btnType}
-            bgColor={subStyles.secondaryCtaBgColor}
-            textColor={subStyles.secondaryCtaTextColor}
+            bgColor={
+              btnType === "tertiary"
+                ? subStyles.tertiaryCtaBgColor
+                : subStyles.subSecondaryCtaBgColor
+            }
+            textColor={
+              btnType === "tertiary"
+                ? subStyles.tertiaryCtaTextColor
+                : subStyles.subSecondaryCtaTextColor
+            }
             label="Sit"
           />
           <Btn
             type={btnType}
-            bgColor={subStyles.secondaryCtaBgColor}
-            textColor={subStyles.secondaryCtaTextColor}
+            bgColor={
+              btnType === "tertiary"
+                ? subStyles.tertiaryCtaBgColor
+                : subStyles.subSecondaryCtaBgColor
+            }
+            textColor={
+              btnType === "tertiary"
+                ? subStyles.tertiaryCtaTextColor
+                : subStyles.subSecondaryCtaTextColor
+            }
             label="Amet"
           />
           <Btn
             type={btnType}
-            bgColor={subStyles.secondaryCtaBgColor}
-            textColor={subStyles.secondaryCtaTextColor}
-            label="Consectetur"
+            bgColor={
+              btnType === "tertiary"
+                ? subStyles.tertiaryCtaBgColor
+                : subStyles.subSecondaryCtaBgColor
+            }
+            textColor={
+              btnType === "tertiary"
+                ? subStyles.tertiaryCtaTextColor
+                : subStyles.subSecondaryCtaTextColor
+            }
+            label="ConsubSectetur"
           />
         </BtnContainer>
       )}
