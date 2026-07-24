@@ -2,39 +2,25 @@
 
 .header {
   background-color: var(--color-green-100);
-  padding: 36px 20px 12px;
+  padding: 72px 20px 12px;
   display: flex;
   justify-content: center;
   transition: padding var(--transition-1) ease;
 }
 
-@media (min-width: 768px) {
-  .header {
-    padding-top: 72px;
-  }
-}
-
 .header .headerContainer {
-  /* width: 100%; */
   max-width: 642px;
 }
 
 h1 {
   font-family: var(--font-family-brand);
-  font-size: 48px;
-  line-height: 52px;
+  font-size: 96px;
+  line-height: 96px;
   font-weight: 700;
   text-align: center;
   margin: 0 0 24px;
   color: var(--color-green-500);
   transition: all var(--transition-1) ease-out;
-}
-
-@media (min-width: 768px) {
-  h1 {
-    font-size: 96px;
-    line-height: 96px;
-  }
 }
 
 #collapsible-conent {
@@ -51,15 +37,8 @@ h1 {
 
 .header p {
   color: #000;
-  font-size: 14px;
-  line-height: 21px;
-}
-
-@media (min-width: 768px) {
-  .header p {
-    font-size: 16px;
-    line-height: 20px;
-  }
+  font-size: 16px;
+  line-height: 20px;
 }
 
 button {
