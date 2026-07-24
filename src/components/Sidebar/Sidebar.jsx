@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { CampaignDetailsContext } from "../../App";
-import InputText from "./InputText/InputText";
 import styles from "./Sidebar.module.css";
-import ColorInput from "./ColorInput/ColorInput";
 import LayoutContainer from "../Layout/LayoutContainer";
 import Row from "../Layout/Row";
 import Column from "../Layout/Column";
-import BodyCopyColorToggle from "./BodyCopyColorToggle/BodyCopyColorToggle";
-import CtaTextColorToggle from "./CtaTextColorToggle/CtaTextColorToggle";
+import ColorInput from "../Form/ColorInput/ColorInput";
+import BodyCopyColorToggle from "../Form/BodyCopyColorToggle/BodyCopyColorToggle";
+import CtaTextColorToggle from "../Form/CtaTextColorToggle/CtaTextColorToggle";
+import InputText from "../Form/InputText/InputText";
 
 export default function Sidebar() {
   const {
