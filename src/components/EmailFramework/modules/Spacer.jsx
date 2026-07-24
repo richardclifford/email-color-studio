@@ -1,4 +1,4 @@
-import styles from "../../../style/EmailFramework.module.css";
+import styles from "../EmailFramework.module.scss";
 
 export default function Spacer() {
   return <div className={styles.spacer}></div>;

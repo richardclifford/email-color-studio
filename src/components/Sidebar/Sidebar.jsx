@@ -1,14 +1,14 @@
 import { useContext } from "react";
 import { CampaignDetailsContext } from "../../App";
-import styles from "./Sidebar.module.css";
-import LayoutContainer from "../Layout/LayoutContainer";
+import styles from "./Sidebar.module.scss";
+import LayoutContainer from "../Layout/LayoutContainer/LayoutContainer";
 import Row from "../Layout/Row";
-import Column from "../Layout/Column";
-import ColorInput from "../Form/ColorInput/ColorInput";
+import Column from "../Layout/Column/Column";
+import InputColor from "../Form/InputColor/InputColor";
 import BodyCopyColorToggle from "../Form/BodyCopyColorToggle/BodyCopyColorToggle";
 import CtaTextColorToggle from "../Form/CtaTextColorToggle/CtaTextColorToggle";
 import InputText from "../Form/InputText/InputText";
-import ExportBtn from "../Form/ExportBtn";
+import ExportBtn from "../Form/ExportBtn/ExportBtn";
 
 export default function Sidebar() {
   const {
@@ -52,7 +52,7 @@ export default function Sidebar() {
         </Row>
         <Row>
           <Column>
-            <ColorInput
+            <InputColor
               name="container"
               label="Email BG"
               value={emailBg.container}
@@ -64,7 +64,7 @@ export default function Sidebar() {
         <LayoutContainer heading="Hero Styles">
           <Row>
             <Column>
-              <ColorInput
+              <InputColor
                 id="hero-card"
                 label="Hero Card"
                 name="bgColor"
@@ -73,7 +73,7 @@ export default function Sidebar() {
               />
             </Column>
             <Column>
-              <ColorInput
+              <InputColor
                 id="hero-badge"
                 label="Hero Badge"
                 name="badgeColor"
@@ -93,7 +93,7 @@ export default function Sidebar() {
               />
             </Column>
             <Column>
-              <ColorInput
+              <InputColor
                 id="hero-primary-cta"
                 label="Hero Primary CTA"
                 name="primaryCtaBgColor"
@@ -105,12 +105,12 @@ export default function Sidebar() {
                   selectedValue={heroStyles.primaryCtaTextColor}
                   handleChange={handleHeroStylesChange}
                 />
-              </ColorInput>
+              </InputColor>
             </Column>
           </Row>
           <Row>
             <Column>
-              <ColorInput
+              <InputColor
                 id="hero-secondary-cta"
                 label="Hero Secondary CTA"
                 name="secondaryCtaBgColor"
@@ -122,7 +122,7 @@ export default function Sidebar() {
                   selectedValue={heroStyles.secondaryCtaTextColor}
                   handleChange={handleHeroStylesChange}
                 />
-              </ColorInput>
+              </InputColor>
             </Column>
             <Column></Column>
           </Row>
@@ -130,7 +130,7 @@ export default function Sidebar() {
         <LayoutContainer heading="Sub Styles">
           <Row>
             <Column>
-              <ColorInput
+              <InputColor
                 id="sub-card"
                 label="Sub Card"
                 name="bgColor"
@@ -139,7 +139,7 @@ export default function Sidebar() {
               />
             </Column>
             <Column>
-              <ColorInput
+              <InputColor
                 id="sub-badge"
                 label="Sub Badge"
                 name="badgeColor"
@@ -159,7 +159,7 @@ export default function Sidebar() {
               />
             </Column>
             <Column>
-              <ColorInput
+              <InputColor
                 id="sub-secondary-cta"
                 label="Sub Secondary CTA"
                 name="subSecondaryCtaBgColor"
@@ -171,12 +171,12 @@ export default function Sidebar() {
                   selectedValue={subStyles.subSecondaryCtaTextColor}
                   handleChange={handleSubStylesChange}
                 />
-              </ColorInput>
+              </InputColor>
             </Column>
           </Row>
           <Row>
             <Column>
-              <ColorInput
+              <InputColor
                 id="sub-tertiary-cta"
                 label="Sub Tertiary CTA"
                 name="tertiaryCtaBgColor"
@@ -188,10 +188,10 @@ export default function Sidebar() {
                   selectedValue={subStyles.tertiaryCtaTextColor}
                   handleChange={handleSubStylesChange}
                 />
-              </ColorInput>
+              </InputColor>
             </Column>
             <Column>
-              <ColorInput
+              <InputColor
                 id="sub-transition-badge"
                 label="Transition Badge"
                 name="transitionBadgeColor"

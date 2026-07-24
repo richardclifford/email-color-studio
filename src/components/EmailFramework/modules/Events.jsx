@@ -5,7 +5,7 @@ import BtnContainer from "../elements/BtnContainer";
 import Headline from "../elements/Headline";
 import Subcopy from "../elements/Subcopy";
 import ImgUpload from "../elements/ImgUpload";
-import styles from "../../../style/EmailFramework.module.css";
+import styles from "../EmailFramework.module.scss";
 
 function Event() {
   return (

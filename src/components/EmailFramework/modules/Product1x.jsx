@@ -7,7 +7,7 @@ import Disclaimer from "../elements/Disclaimer";
 import Headline from "../elements/Headline";
 import Subcopy from "../elements/Subcopy";
 import ImgUpload from "../elements/ImgUpload";
-import styles from "../../../style/EmailFramework.module.css";
+import styles from "../EmailFramework.module.scss";
 
 export default function Product1x({
   isTransparent = false,

@@ -1,4 +1,4 @@
-import styles from "./InputContainer.module.css";
+import styles from "./InputContainer.module.scss";
 
 export default function InputContainer({ children, hasPadding }) {
   return (

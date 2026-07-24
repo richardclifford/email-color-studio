@@ -1,4 +1,4 @@
-@import url("../../style/variables.css");
+@import url("../../../style/variables.css");
 
 button.export {
   display: flex;
@@ -9,28 +9,27 @@ button.export {
   padding: 12px 24px;
   border-radius: 100px;
   box-shadow: 0 4px 0 0 var(--color-btn-border);
-  align-self: center;
   transition: all var(--transition-1) ease;
-}
 
-button.export:hover {
-  box-shadow:
-    0 4px 0 0 var(--color-btn-border),
-    0 -4px 4px 0 rgba(175, 175, 175, 0.35) inset;
-  transition: all var(--transition-1) ease;
-}
+  &:hover {
+    box-shadow:
+      0 4px 0 0 var(--color-btn-border),
+      0 -4px 4px 0 rgba(175, 175, 175, 0.35) inset;
+    transition: all var(--transition-1) ease;
+  }
 
-button.export:active {
-  transform: translateY(4px);
-  box-shadow:
-    0 0 0 0 var(--color-btn-border),
-    0 -4px 4px 0 rgba(175, 175, 175, 0.35) inset;
-  transition: all var(--transition-1) ease;
-}
+  &:active {
+    transform: translateY(4px);
+    box-shadow:
+      0 0 0 0 var(--color-btn-border),
+      0 -4px 4px 0 rgba(175, 175, 175, 0.35) inset;
+    transition: all var(--transition-1) ease;
+  }
 
-button.export:disabled {
-  opacity: 1;
-  cursor: progress;
+  &:disabled {
+    opacity: 1;
+    cursor: progress;
+  }
 }
 
 .spinner {

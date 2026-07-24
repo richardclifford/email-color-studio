@@ -1,4 +1,4 @@
-@import url("./variables.css");
+@import url("../../style/variables.css");
 
 .containerEmail {
   width: 400px;
@@ -80,13 +80,13 @@
   background-color: #f1bedb;
   aspect-ratio: 1/1;
   cursor: pointer;
-}
 
-.imgPlaceholder .iconUpload {
-  width: 56px;
-  height: auto;
-  fill: #89215c;
-  transition: all var(--transition-2) ease;
+  .iconUpload {
+    width: 56px;
+    height: auto;
+    fill: #89215c;
+    transition: all var(--transition-2) ease;
+  }
 }
 
 .imgPlaceholder:hover .iconUpload {
@@ -165,49 +165,41 @@
   line-height: 18px;
 }
 
-hr {
-  border: none;
-  height: 1px;
-  margin: 0 0 8px;
-  background-color: var(--color-black);
-  opacity: 16%;
-}
-
 .disclaimer {
   padding: 12px var(--p-h-primary);
-}
 
-.disclaimer p {
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 400;
+  hr {
+    border: none;
+    height: 1px;
+    margin: 0 0 8px;
+    background-color: var(--color-black);
+    opacity: 16%;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+  }
 }
 
 .btnContainer {
   padding: 12px var(--p-h-primary);
   gap: 8px;
-}
 
-.btn {
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 700;
-  padding: 12px 20px;
-  border: 0px;
-  border-radius: 4px;
-  outline: none;
-}
+  .btn {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    padding: 12px 20px;
+    border: 0px;
+    border-radius: 4px;
+    outline: none;
 
-.btn.dark {
-  color: var(--color-black);
-}
-
-.btn.light {
-  color: var(--color-white);
-}
-
-.btn.tertiary {
-  border-radius: 180px;
+    &.tertiary {
+      border-radius: 180px;
+    }
+  }
 }
 
 .spacer {

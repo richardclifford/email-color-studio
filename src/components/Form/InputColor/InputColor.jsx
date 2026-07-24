@@ -1,5 +1,5 @@
 import InputContainer from "../InputContainer/InputContainer";
-import styles from "./ColorInput.module.css";
+import styles from "./InputColor.module.scss";
 
 export const ColorInput = ({
   children,
@@ -11,7 +11,7 @@ export const ColorInput = ({
 }) => {
   return (
     <>
-      <div className={`${styles.label} flex flex-col gap-1`}>
+      <div className=" flex flex-col gap-1">
         {label && <label htmlFor={id}>{label}</label>}
         <InputContainer hasPadding={true}>
           <input
@@ -29,7 +29,7 @@ export const ColorInput = ({
             value={value}
             onChange={onValueChange}
             maxLength={7}
-            className={`${styles.textColorInput} flex-1`}
+            className={`${styles.inputTextColor} flex-1`}
           />
           {children}
         </InputContainer>

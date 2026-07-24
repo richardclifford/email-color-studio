@@ -1,4 +1,4 @@
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 export default function Header() {

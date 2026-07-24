@@ -1,0 +1,27 @@
+input[type="color"] {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--color-black);
+  padding: 0;
+  flex-shrink: 0;
+
+  &::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+  &::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+  }
+}
+
+.inputTextColor {
+  border: none;
+  text-transform: uppercase;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}

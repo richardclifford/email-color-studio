@@ -104,6 +104,11 @@ p {
   gap: 24px;
 }
 
+label:has(+ div input:required)::after {
+  content: " *";
+  color: var(--color-red);
+}
+
 label,
 legend {
   font-size: 14px;
@@ -120,4 +125,8 @@ fieldset {
 
 fieldset legend {
   margin-bottom: 8px;
+}
+
+button {
+  cursor: pointer;
 }

@@ -6,8 +6,8 @@ import BtnContainer from "../elements/BtnContainer";
 import Disclaimer from "../elements/Disclaimer";
 import Headline from "../elements/Headline";
 import Subcopy from "../elements/Subcopy";
-import styles from "../../../style/EmailFramework.module.css";
 import ImgUpload from "../elements/ImgUpload";
+import styles from "../EmailFramework.module.scss";
 
 export default function Hero() {
   const { heroStyles } = useContext(CampaignDetailsContext);

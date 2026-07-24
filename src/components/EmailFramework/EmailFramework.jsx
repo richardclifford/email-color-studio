@@ -7,7 +7,7 @@ import Product2x from "./modules/Product2x.jsx";
 import Product3x from "./modules/Product3x.jsx";
 import ProductHalf from "./modules/ProductHalf.jsx";
 import Events from "./modules/Events.jsx";
-import styles from "../../style/EmailFramework.module.css";
+import styles from "./EmailFramework.module.scss";
 
 export default function EmailFramework() {
   const { emailRef, emailBg } = useContext(CampaignDetailsContext);

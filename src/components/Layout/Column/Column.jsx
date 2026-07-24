@@ -1,4 +1,4 @@
-import styles from "./Layout.module.css";
+import styles from "./Column.module.css";
 
 export default function Column({ children }) {
   return (

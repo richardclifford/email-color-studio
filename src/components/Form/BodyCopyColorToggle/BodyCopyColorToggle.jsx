@@ -1,4 +1,4 @@
-import styles from "./BodyCopyColorToggle.module.css";
+import styles from "./BodyCopyColorToggle.module.scss";
 
 export default function BodyCopyColorToggle({
   // id,

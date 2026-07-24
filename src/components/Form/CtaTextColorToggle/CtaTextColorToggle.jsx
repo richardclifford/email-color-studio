@@ -1,4 +1,4 @@
-import styles from "./CtaTextColorToggle.module.css";
+import styles from "./CtaTextColorToggle.module.scss";
 
 export default function CtaTextColorToggle({
   name,

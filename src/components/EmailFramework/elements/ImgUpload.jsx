@@ -1,6 +1,5 @@
-// import { useState } from "react";
 import { useRef, useState } from "react";
-import styles from "../../../style/EmailFramework.module.css";
+import styles from "../EmailFramework.module.scss";
 
 export default function ImgUpload() {
   const [imgUpload, setImgUpload] = useState(null);
