@@ -19,9 +19,8 @@ export default function Sidebar() {
     handleHeroStylesChange,
     subStyles,
     handleSubStylesChange,
-    // emailRef,
     handleSubmit,
-    // handleExport,
+    handleReset,
   } = useContext(CampaignDetailsContext);
 
   return (
@@ -222,7 +221,7 @@ export default function Sidebar() {
         <button type="submit" className={styles.export}>
           Export Theme
         </button>
-        <button type="reset" className={styles.reset}>
+        <button type="reset" onClick={handleReset} className={styles.reset}>
           Reset to Default Colors
         </button>
       </form>
