@@ -32,47 +32,52 @@
 
 .imgContainer {
   position: relative;
-}
 
-.imgContainer .imgOverlay {
-  background: linear-gradient(225deg, rgba(0, 0, 0, 0.75) 0%, transparent 15%);
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: right;
-  inset: 0;
-  padding: 5px;
-  visibility: hidden;
-}
+  .imgOverlay {
+    background: linear-gradient(
+      225deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      transparent 15%
+    );
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: right;
+    inset: 0;
+    padding: 5px;
+    visibility: hidden;
+  }
 
-.imgContainer:hover .imgOverlay {
-  visibility: visible;
-}
+  &:hover .imgOverlay {
+    visibility: visible;
+  }
 
-.btnClose {
-  cursor: pointer;
-  transform: scale(0);
-  opacity: 0;
-  transition: all var(--transition-2) ease;
-}
+  .btnClose {
+    background-color: transparent;
+    cursor: pointer;
+    transform: scale(0);
+    opacity: 0;
+    transition: all var(--transition-2) ease;
 
-.imgContainer:hover .btnClose {
-  transform: scale(1);
-  opacity: 1;
-  transition: all var(--transition-2) ease;
-}
+    &:hover {
+      transform: scale(1.1);
+      transition: all var(--transition-2) ease;
+    }
 
-.imgContainer .btnClose:hover {
-  transform: scale(1.1);
-  transition: all var(--transition-2) ease;
-}
+    .iconRemove {
+      width: 32px;
+      height: 32px;
+      fill: var(--color-white);
+      transition: all var(--transition-1) ease;
+    }
+  }
 
-.btnClose .iconRemove {
-  width: 32px;
-  height: 32px;
-  fill: var(--color-white);
-  transition: all var(--transition-1) ease;
+  &:hover .btnClose {
+    transform: scale(1);
+    opacity: 1;
+    transition: all var(--transition-2) ease;
+  }
 }
 
 .imgPlaceholder {
@@ -87,11 +92,11 @@
     fill: #89215c;
     transition: all var(--transition-2) ease;
   }
-}
 
-.imgPlaceholder:hover .iconUpload {
-  transform: scale(1.2);
-  transition: all var(--transition-2) ease;
+  &:hover .iconUpload {
+    transform: scale(1.2);
+    transition: all var(--transition-2) ease;
+  }
 }
 
 :global(#product-1x) .imgPlaceholder {
