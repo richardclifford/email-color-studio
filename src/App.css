@@ -130,3 +130,8 @@ fieldset legend {
 button {
   cursor: pointer;
 }
+
+button:focus-visible {
+  border: none;
+  outline: none;
+}

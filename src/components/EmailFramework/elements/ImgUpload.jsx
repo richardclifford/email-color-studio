@@ -18,14 +18,7 @@ export default function ImgUpload() {
   };
 
   const handleImageRemove = () => {
-    const confirmRemove = window.confirm(
-      "Are you sure you want to remove this image?",
-    );
-    if (confirmRemove) {
-      setImgUpload(null);
-    } else {
-      return;
-    }
+    setImgUpload(null);
   };
 
   return (

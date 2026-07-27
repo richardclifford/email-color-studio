@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { CampaignDetailsContext } from "../../../App";
-import styles from "./ExportBtn.module.scss";
+import styles from "./BtnExport.module.scss";
 
-export default function ExportBtn() {
+export default function BtnExport() {
   const { isLoading } = useContext(CampaignDetailsContext);
 
   return (

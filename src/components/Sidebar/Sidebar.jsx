@@ -8,7 +8,8 @@ import InputColor from "../Form/InputColor/InputColor";
 import BodyCopyColorToggle from "../Form/BodyCopyColorToggle/BodyCopyColorToggle";
 import CtaTextColorToggle from "../Form/CtaTextColorToggle/CtaTextColorToggle";
 import InputText from "../Form/InputText/InputText";
-import ExportBtn from "../Form/ExportBtn/ExportBtn";
+import BtnExport from "../Form/BtnExport/BtnExport";
+import BtnReset from "../Form/BtnReset/BtnReset";
 
 export default function Sidebar() {
   const {
@@ -21,7 +22,6 @@ export default function Sidebar() {
     subStyles,
     handleSubStylesChange,
     handleSubmit,
-    handleReset,
   } = useContext(CampaignDetailsContext);
 
   return (
@@ -218,13 +218,8 @@ export default function Sidebar() {
           Your theme will be converted to a campaign one-sheeter and shared with
           the team.
         </p>
-        <ExportBtn />
-        {/* <button type="submit" className={styles.export}>
-          Export Theme
-        </button> */}
-        <button type="reset" onClick={handleReset} className={styles.reset}>
-          Reset to Default Colors
-        </button>
+        <BtnExport />
+        <BtnReset />
       </form>
     </div>
   );

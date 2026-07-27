@@ -140,7 +140,11 @@ function App() {
   };
 
   const handleReset = () => {
-    (setEmailBg(DEFAULT_EMAIL_BG),
+    (setCampaignDetails({
+      campaignName: "",
+      owner: "",
+    }),
+      setEmailBg(DEFAULT_EMAIL_BG),
       setHeroStyles(DEFAULT_HERO_STYLES),
       setSubStyles(DEFAULT_SUB_STYLES));
   };
