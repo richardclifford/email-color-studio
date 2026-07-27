@@ -1,13 +1,18 @@
 import { createContext, useState, useRef } from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
+
 import html2canvas from "html2canvas";
 
 export const CampaignDetailsContext = createContext();
 
 export function CampaignProvider({ children }) {
+  const DEFAULT_CAMPAIGN_DETAILS = {
+    campaignName: "",
+    owner: "",
+  };
   const DEFAULT_EMAIL_BG = {
     container: "#F6F5F3",
   };
-
   const DEFAULT_HERO_STYLES = {
     type: "hero",
     bgColor: "#FFFFFF",
@@ -18,7 +23,6 @@ export function CampaignProvider({ children }) {
     secondaryCtaBgColor: "#E0DCD9",
     secondaryCtaTextColor: "dark",
   };
-
   const DEFAULT_SUB_STYLES = {
     bgColor: "#FFFFFF",
     badgeColor: "#161313",
@@ -30,14 +34,19 @@ export function CampaignProvider({ children }) {
     tertiaryCtaBgColor: "#E0DCD9",
     tertiaryCtaTextColor: "dark",
   };
-
-  const [campaignDetails, setCampaignDetails] = useState({
-    campaignName: "",
-    owner: "",
-  });
-  const [emailBg, setEmailBg] = useState(DEFAULT_EMAIL_BG);
-  const [heroStyles, setHeroStyles] = useState(DEFAULT_HERO_STYLES);
-  const [subStyles, setSubStyles] = useState(DEFAULT_SUB_STYLES);
+  const [campaignDetails, setCampaignDetails] = useLocalStorage(
+    "campaignDetails",
+    DEFAULT_CAMPAIGN_DETAILS,
+  );
+  const [emailBg, setEmailBg] = useLocalStorage("emailBg", DEFAULT_EMAIL_BG);
+  const [heroStyles, setHeroStyles] = useLocalStorage(
+    "heroStyles",
+    DEFAULT_HERO_STYLES,
+  );
+  const [subStyles, setSubStyles] = useLocalStorage(
+    "subStyles",
+    DEFAULT_SUB_STYLES,
+  );
   const [isLoading, setIsLoading] = useState(false);
 
   const emailRef = useRef();
