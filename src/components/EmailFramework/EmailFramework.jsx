@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CampaignDetailsContext } from "../../App";
+import { CampaignDetailsContext } from "../../context/CampaignContext.jsx";
 import Hero from "./modules/Hero.jsx";
 import Spacer from "./modules/Spacer.jsx";
 import Product1x from "./modules/Product1x.jsx";

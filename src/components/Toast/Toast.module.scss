@@ -1,0 +1,32 @@
+.toastContainer {
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+
+/* Base Toast Card Design */
+.toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #006554;
+  color: #ffffff;
+
+  min-width: 300px;
+  max-width: 450px;
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: sans-serif;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.toast button {
+  background-color: transparent;
+  color: white;
+}

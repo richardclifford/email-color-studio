@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CampaignDetailsContext } from "../../../App";
+import { CampaignDetailsContext } from "../../../context/CampaignContext";
 import Headline from "../elements/Headline";
 import Subcopy from "../elements/Subcopy";
 import ImgUpload from "../elements/ImgUpload";

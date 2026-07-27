@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CampaignDetailsContext } from "../../../App";
+import { CampaignDetailsContext } from "../../../context/CampaignContext";
 import Badge from "../elements/Badge";
 import Btn from "../elements/Btn";
 import BtnContainer from "../elements/BtnContainer";

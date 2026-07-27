@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useContext } from "react";
-import { CampaignDetailsContext } from "../../../App";
+import { CampaignDetailsContext } from "../../../context/CampaignContext";
 import ConfirmationModal from "../ConfirmationModal/ConfirmationModal";
 import styles from "./BtnReset.module.scss";
 

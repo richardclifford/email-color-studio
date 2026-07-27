@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CampaignDetailsContext } from "../../App";
+import { CampaignDetailsContext } from "../../context/CampaignContext";
 import styles from "./Sidebar.module.scss";
 import LayoutContainer from "../Layout/LayoutContainer/LayoutContainer";
 import Row from "../Layout/Row";

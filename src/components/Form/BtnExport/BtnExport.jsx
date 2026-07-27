@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CampaignDetailsContext } from "../../../App";
+import { CampaignDetailsContext } from "../../../context/CampaignContext";
 import styles from "./BtnExport.module.scss";
 
 export default function BtnExport() {
