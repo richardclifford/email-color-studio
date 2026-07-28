@@ -1,7 +1,9 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import styles from "../EmailFramework.module.scss";
+import { ToastContext } from "../../../context/ToastContext";
 
 export default function ImgUpload() {
+  const { addToast } = useContext(ToastContext);
   const [imgUpload, setImgUpload] = useState(null);
   const fileInputRef = useRef(null);
 
@@ -19,6 +21,7 @@ export default function ImgUpload() {
 
   const handleImageRemove = () => {
     setImgUpload(null);
+    addToast("Image has been removed");
   };
 
   return (

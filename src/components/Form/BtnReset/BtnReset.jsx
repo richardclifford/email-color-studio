@@ -3,8 +3,10 @@ import { useContext } from "react";
 import { CampaignDetailsContext } from "../../../context/CampaignContext";
 import ConfirmationModal from "../ConfirmationModal/ConfirmationModal";
 import styles from "./BtnReset.module.scss";
+import { ToastContext } from "../../../context/ToastContext";
 
 export default function BtnReset() {
+  const { addToast } = useContext(ToastContext);
   const { handleReset } = useContext(CampaignDetailsContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleOpenModal = () => setIsModalOpen(true);
@@ -33,6 +35,7 @@ export default function BtnReset() {
   const handleConfirmAction = () => {
     handleReset();
     setIsModalOpen(false);
+    addToast("Settings reset to default");
   };
 
   return (

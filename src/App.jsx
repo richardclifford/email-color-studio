@@ -4,16 +4,19 @@ import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { CampaignProvider } from "./context/CampaignContext";
 import Main from "./components/Layout/Main";
+import { ToastProvider } from "./context/ToastContext";
 
 function App() {
   return (
     <>
       <Header />
       <CampaignProvider>
-        <Main>
-          <EmailFramework />
-          <Sidebar />
-        </Main>
+        <ToastProvider>
+          <Main>
+            <EmailFramework />
+            <Sidebar />
+          </Main>
+        </ToastProvider>
       </CampaignProvider>
     </>
   );
