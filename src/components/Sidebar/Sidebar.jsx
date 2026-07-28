@@ -131,6 +131,26 @@ export default function Sidebar() {
           <Row>
             <Column>
               <InputColor
+                id="sub-transition-badge"
+                label="Transition Badge"
+                name="transitionBadgeColor"
+                value={subStyles.transitionBadgeColor}
+                onValueChange={handleSubStylesChange}
+              />
+            </Column>
+            <Column>
+              <BodyCopyColorToggle
+                id="sub-transition-body-copy"
+                label="Transition Body Copy"
+                name="transitionBodyTextColor"
+                selectedValue={subStyles.transitionBodyTextColor}
+                handleChange={handleSubStylesChange}
+              />
+            </Column>
+          </Row>
+          <Row>
+            <Column>
+              <InputColor
                 id="sub-card"
                 label="Sub Card"
                 name="bgColor"
@@ -189,26 +209,6 @@ export default function Sidebar() {
                   handleChange={handleSubStylesChange}
                 />
               </InputColor>
-            </Column>
-            <Column>
-              <InputColor
-                id="sub-transition-badge"
-                label="Transition Badge"
-                name="transitionBadgeColor"
-                value={subStyles.transitionBadgeColor}
-                onValueChange={handleSubStylesChange}
-              />
-            </Column>
-          </Row>
-          <Row>
-            <Column>
-              <BodyCopyColorToggle
-                id="sub-transition-body-copy"
-                label="Transition Body Copy"
-                name="transitionBodyTextColor"
-                selectedValue={subStyles.transitionBodyTextColor}
-                handleChange={handleSubStylesChange}
-              />
             </Column>
             <Column></Column>
           </Row>

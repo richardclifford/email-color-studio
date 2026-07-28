@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import { ToastContext } from "../../context/ToastContext";
-import { CampaignDetailsContext } from "../../context/CampaignContext";
+import { ToastContext } from "../../../context/ToastContext";
+import { CampaignDetailsContext } from "../../../context/CampaignContext";
+import styles from "./Main.module.scss";
 
 export default function Main({ children }) {
   const { emailBg } = useContext(CampaignDetailsContext);
@@ -23,7 +24,7 @@ export default function Main({ children }) {
       </div>
       <main
         id="email"
-        className="container"
+        className={`${styles.mainContainer} flex flex-row justify-center`}
         style={{ backgroundColor: emailBg.container }}
       >
         {children}
