@@ -1,15 +1,15 @@
 import { useContext } from "react";
 import { CampaignDetailsContext } from "../../context/CampaignContext";
-import styles from "./Sidebar.module.scss";
+import styles from "./Form.module.scss";
 import LayoutContainer from "../Layout/LayoutContainer/LayoutContainer";
 import Row from "../Layout/Row";
 import Column from "../Layout/Column/Column";
-import InputColor from "../Form/InputColor/InputColor";
-import BodyCopyColorToggle from "../Form/BodyCopyColorToggle/BodyCopyColorToggle";
-import CtaTextColorToggle from "../Form/CtaTextColorToggle/CtaTextColorToggle";
-import InputText from "../Form/InputText/InputText";
-import BtnExport from "../Form/BtnExport/BtnExport";
-import BtnReset from "../Form/BtnReset/BtnReset";
+import InputColor from "./InputColor/InputColor";
+import BodyCopyColorToggle from "./BodyCopyColorToggle/BodyCopyColorToggle";
+import CtaTextColorToggle from "./CtaTextColorToggle/CtaTextColorToggle";
+import InputText from "./InputText/InputText";
+import BtnExport from "./BtnExport/BtnExport";
+import BtnReset from "./BtnReset/BtnReset";
 
 export default function Sidebar() {
   const {
