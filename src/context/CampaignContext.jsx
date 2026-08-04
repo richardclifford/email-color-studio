@@ -93,55 +93,53 @@ export function CampaignProvider({ children }) {
     screenshotLink.click();
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     setIsLoading(true);
 
-    const fileContent =
-      `--- Campaign Lead Information ---\n\n` +
-      `Details:\n` +
-      `\n` +
-      `Campaign name: ${campaignDetails.campaignName}\n` +
-      `Campaign owner: ${campaignDetails.owner}\n` +
-      `\n` +
-      `Email Bg: ${emailBg.container}\n` +
-      `\n` +
-      `Hero Card: ${heroStyles.bgColor}\n` +
-      `Hero BadgeColor: ${heroStyles.badgeColor}\n` +
-      `Hero Body Copy: ${heroStyles.heroBodyTextColor}\n` +
-      `Hero Primary CTA Bg Color: ${heroStyles.primaryCtaBgColor}\n` +
-      `Hero Primary CTA Text Color: ${heroStyles.primaryCtaTextColor}\n` +
-      `Hero Secondary CTA Bg Color: ${heroStyles.secondaryCtaBgColor}\n` +
-      `Hero Secondary CTA Text Color: ${heroStyles.secondaryCtaTextColor}\n` +
-      `\n` +
-      `Sub Card: ${subStyles.bgColor}\n` +
-      `Sub BadgeColor: ${subStyles.badgeColor}\n` +
-      `Sub Body Copy: ${subStyles.subBodyTextColor}\n` +
-      `Sub Secondary CTA Bg Color: ${subStyles.secondaryCtaBgColor}\n` +
-      `Sub Secondary CTA Text Color: ${subStyles.secondaryCtaTextColor}\n`;
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 100)); // Simulates an API call
+      const fileContent =
+        `--- Campaign Lead Information ---\n\n` +
+        `Details:\n` +
+        `\n` +
+        `Campaign name: ${campaignDetails.campaignName}\n` +
+        `Campaign owner: ${campaignDetails.owner}\n` +
+        `\n` +
+        `Email Bg: ${emailBg.container}\n` +
+        `\n` +
+        `Hero Card: ${heroStyles.bgColor}\n` +
+        `Hero BadgeColor: ${heroStyles.badgeColor}\n` +
+        `Hero Body Copy: ${heroStyles.heroBodyTextColor}\n` +
+        `Hero Primary CTA Bg Color: ${heroStyles.primaryCtaBgColor}\n` +
+        `Hero Primary CTA Text Color: ${heroStyles.primaryCtaTextColor}\n` +
+        `Hero Secondary CTA Bg Color: ${heroStyles.secondaryCtaBgColor}\n` +
+        `Hero Secondary CTA Text Color: ${heroStyles.secondaryCtaTextColor}\n` +
+        `\n` +
+        `Sub Card: ${subStyles.bgColor}\n` +
+        `Sub BadgeColor: ${subStyles.badgeColor}\n` +
+        `Sub Body Copy: ${subStyles.subBodyTextColor}\n` +
+        `Sub Secondary CTA Bg Color: ${subStyles.secondaryCtaBgColor}\n` +
+        `Sub Secondary CTA Text Color: ${subStyles.secondaryCtaTextColor}\n`;
 
-    const blob = new Blob([fileContent], { type: "text/plain" });
+      const blob = new Blob([fileContent], { type: "text/plain" });
+      const fileDownloadUrl = URL.createObjectURL(blob);
+      const link = document.createElement("a");
 
-    const fileDownloadUrl = URL.createObjectURL(blob);
+      link.href = fileDownloadUrl;
+      link.download = `${campaignDetails.campaignName.toLowerCase().replace(/\s+/g, "-")}-campaign-colors.txt`;
+      document.body.appendChild(link);
+      link.click();
 
-    const link = document.createElement("a");
-    link.href = fileDownloadUrl;
-    link.download = `${campaignDetails.campaignName.toLowerCase().replace(/\s+/g, "-")}-campaign-colors.txt`;
+      //cleanup
+      document.body.removeChild(link);
+      URL.revokeObjectURL(fileDownloadUrl);
 
-    document.body.appendChild(link);
-    link.click();
-
-    //cleanup
-    document.body.removeChild(link);
-    URL.revokeObjectURL(fileDownloadUrl); // Free up memory
-
-    // capture/download screenshot
-    handleScreenshotCapture();
-
-    setTimeout(() => {
+      // capture/download screenshot
+      handleScreenshotCapture();
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   const handleReset = () => {
