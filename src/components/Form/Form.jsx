@@ -54,7 +54,7 @@ export default function Sidebar() {
           <Column>
             <InputColor
               name="container"
-              label="Email BG"
+              label="Email Background"
               value={emailBg.container}
               onValueChange={handleEmailBgChange}
             />
@@ -65,8 +65,8 @@ export default function Sidebar() {
           <Row>
             <Column>
               <InputColor
-                id="hero-card"
-                label="Hero Card"
+                id="hero-bg"
+                label="Hero Background"
                 name="bgColor"
                 value={heroStyles.bgColor}
                 onValueChange={handleHeroStylesChange}
@@ -151,8 +151,8 @@ export default function Sidebar() {
           <Row>
             <Column>
               <InputColor
-                id="sub-card"
-                label="Sub Card"
+                id="sub-bg"
+                label="Sub Background"
                 name="bgColor"
                 value={subStyles.bgColor}
                 onValueChange={handleSubStylesChange}
