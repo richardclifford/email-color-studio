@@ -34,6 +34,10 @@ export function CampaignProvider({ children }) {
     tertiaryCtaBgColor: "#E0DCD9",
     tertiaryCtaTextColor: "dark",
   };
+  const EXPORTED_TEXT_COLORS = {
+    light: "#FFFFFF",
+    dark: "#161313",
+  };
   const [campaignDetails, setCampaignDetails] = useLocalStorage(
     "campaignDetails",
     DEFAULT_CAMPAIGN_DETAILS,
@@ -100,27 +104,32 @@ export function CampaignProvider({ children }) {
     try {
       await new Promise((resolve) => setTimeout(resolve, 100)); // Simulates an API call
       const fileContent =
-        `--- Campaign Lead Information ---\n\n` +
-        `Details:\n` +
-        `\n` +
         `Campaign name: ${campaignDetails.campaignName}\n` +
         `Campaign owner: ${campaignDetails.owner}\n` +
         `\n` +
-        `Email Bg: ${emailBg.container}\n` +
+        `emailBgColor="${emailBg.container}"\n` +
         `\n` +
-        `Hero Card: ${heroStyles.bgColor}\n` +
-        `Hero BadgeColor: ${heroStyles.badgeColor}\n` +
-        `Hero Body Copy: ${heroStyles.heroBodyTextColor}\n` +
-        `Hero Primary CTA Bg Color: ${heroStyles.primaryCtaBgColor}\n` +
-        `Hero Primary CTA Text Color: ${heroStyles.primaryCtaTextColor}\n` +
-        `Hero Secondary CTA Bg Color: ${heroStyles.secondaryCtaBgColor}\n` +
-        `Hero Secondary CTA Text Color: ${heroStyles.secondaryCtaTextColor}\n` +
+        `heroCardBgColor="${heroStyles.bgColor}"\n` +
+        `heroBadgeColor="${heroStyles.badgeColor}"\n` +
+        `heroTextThemeDefault="${heroStyles.heroBodyTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
+        `heroPrimaryCtaBgColor="${heroStyles.primaryCtaBgColor}"\n` +
+        `heroPrimaryCtaTextTheme="${heroStyles.primaryCtaTextColor}"\n` +
+        `heroSecondaryCtaBgColor="${heroStyles.secondaryCtaBgColor}"\n` +
+        `heroSecondaryCtaTextTheme="${heroStyles.secondaryCtaTextColor}"\n` +
+        `heroHorizontalRuleColor="${heroStyles.heroBodyTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
         `\n` +
-        `Sub Card: ${subStyles.bgColor}\n` +
-        `Sub BadgeColor: ${subStyles.badgeColor}\n` +
-        `Sub Body Copy: ${subStyles.subBodyTextColor}\n` +
-        `Sub Secondary CTA Bg Color: ${subStyles.secondaryCtaBgColor}\n` +
-        `Sub Secondary CTA Text Color: ${subStyles.secondaryCtaTextColor}\n`;
+        `subCardBgColor="${subStyles.bgColor}"\n` +
+        `subBadgeColor=${subStyles.badgeColor}"\n` +
+        `subTextThemeDefault="${subStyles.subBodyTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
+        `subSecondaryCtaBgColor="${subStyles.secondaryCtaBgColor}"\n` +
+        `subSecondaryCtaTextTheme="${subStyles.secondaryCtaTextColor}"\n` +
+        `subTertiaryCtaBgColor="${subStyles.tertiaryCtaBgColor}"\n` +
+        `subTertiaryCtaTextTheme="${subStyles.tertiaryCtaTextColor}"\n` +
+        `subHorizontalRuleColor="${subStyles.subBodyTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
+        `\n` +
+        `transitionBadgeColor="${subStyles.transitionBadgeColor}"\n` +
+        `transitionTextThemeDefault="${subStyles.tertiaryCtaTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
+        `transitionHorizontalRuleColor="${subStyles.tertiaryCtaTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n`;
 
       const blob = new Blob([fileContent], { type: "text/plain" });
       const fileDownloadUrl = URL.createObjectURL(blob);
