@@ -11,7 +11,7 @@ export default function BodyCopyColorToggle({
     <fieldset className={`${styles.bodyColorContainer} flex flex-col gap-8`}>
       <legend>{label}</legend>
       <div className="flex gap-6">
-        <label className={`${styles.inputToggle} ${styles.inputToggleActive}`}>
+        <label className={`${styles.inputToggle} flex-1 brdr-radius-main`}>
           <input
             type="radio"
             id={`${name}-light`}
@@ -23,7 +23,7 @@ export default function BodyCopyColorToggle({
           />
           Light
         </label>
-        <label className={`${styles.inputToggle} ${styles.inputToggleActive}`}>
+        <label className={`${styles.inputToggle} flex-1 brdr-radius-main`}>
           <input
             type="radio"
             id={`${name}-dark`}

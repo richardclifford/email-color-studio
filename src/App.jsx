@@ -1,4 +1,4 @@
-import "./App.css";
+import "./style/App.css";
 import EmailFramework from "./components/EmailFramework/EmailFramework";
 import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";

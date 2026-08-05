@@ -31,8 +31,8 @@ export function CampaignProvider({ children }) {
     subBodyTextColor: "dark",
     subSecondaryCtaBgColor: "#E0DCD9",
     subSecondaryCtaTextColor: "dark",
-    tertiaryCtaBgColor: "#E0DCD9",
-    tertiaryCtaTextColor: "dark",
+    subTertiaryCtaBgColor: "#E0DCD9",
+    subTertiaryCtaTextColor: "dark",
   };
   const EXPORTED_TEXT_COLORS = {
     light: "#FFFFFF",
@@ -113,23 +113,23 @@ export function CampaignProvider({ children }) {
         `heroBadgeColor="${heroStyles.badgeColor}"\n` +
         `heroTextThemeDefault="${heroStyles.heroBodyTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
         `heroPrimaryCtaBgColor="${heroStyles.primaryCtaBgColor}"\n` +
-        `heroPrimaryCtaTextTheme="${heroStyles.primaryCtaTextColor}"\n` +
+        `heroPrimaryCtaTextTheme="${heroStyles.primaryCtaTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
         `heroSecondaryCtaBgColor="${heroStyles.secondaryCtaBgColor}"\n` +
-        `heroSecondaryCtaTextTheme="${heroStyles.secondaryCtaTextColor}"\n` +
+        `heroSecondaryCtaTextTheme="${heroStyles.secondaryCtaTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
         `heroHorizontalRuleColor="${heroStyles.heroBodyTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
         `\n` +
         `subCardBgColor="${subStyles.bgColor}"\n` +
         `subBadgeColor=${subStyles.badgeColor}"\n` +
         `subTextThemeDefault="${subStyles.subBodyTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
-        `subSecondaryCtaBgColor="${subStyles.secondaryCtaBgColor}"\n` +
-        `subSecondaryCtaTextTheme="${subStyles.secondaryCtaTextColor}"\n` +
-        `subTertiaryCtaBgColor="${subStyles.tertiaryCtaBgColor}"\n` +
-        `subTertiaryCtaTextTheme="${subStyles.tertiaryCtaTextColor}"\n` +
+        `subSecondaryCtaBgColor="${subStyles.subSecondaryCtaBgColor}"\n` +
+        `subSecondaryCtaTextTheme="${subStyles.subSecondaryCtaTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
+        `subTertiaryCtaBgColor="${subStyles.subTertiaryCtaBgColor}"\n` +
+        `subTertiaryCtaTextTheme="${subStyles.subTertiaryCtaTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
         `subHorizontalRuleColor="${subStyles.subBodyTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
         `\n` +
         `transitionBadgeColor="${subStyles.transitionBadgeColor}"\n` +
-        `transitionTextThemeDefault="${subStyles.tertiaryCtaTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
-        `transitionHorizontalRuleColor="${subStyles.tertiaryCtaTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n`;
+        `transitionTextThemeDefault="${subStyles.subTertiaryCtaTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
+        `transitionHorizontalRuleColor="${subStyles.subTertiaryCtaTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n`;
 
       const blob = new Blob([fileContent], { type: "text/plain" });
       const fileDownloadUrl = URL.createObjectURL(blob);

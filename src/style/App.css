@@ -1,4 +1,4 @@
-@import url("./style/variables.css");
+@import url("./variables.css");
 
 *,
 *::before,
@@ -127,4 +127,12 @@ button {
 button:focus-visible {
   border: none;
   outline: none;
+}
+
+.brdr-radius-main {
+  border-radius: 4px;
+}
+
+.brdr-radius-round {
+  border-radius: 100px;
 }

@@ -1,19 +1,18 @@
 @import url("../../../style/variables.css");
 
 button.export {
-  display: flex;
   gap: 6px;
   background-color: var(--color-white);
   font-size: 16px;
   font-weight: 700;
   padding: 12px 24px;
   border-radius: 100px;
-  box-shadow: 0 4px 0 0 var(--color-btn-border);
+  box-shadow: 0 4px 0 0 var(--color-green-btn);
   transition: all var(--transition-1) ease;
 
   &:hover {
     box-shadow:
-      0 4px 0 0 var(--color-btn-border),
+      0 4px 0 0 var(--color-green-btn),
       0 -4px 4px 0 rgba(175, 175, 175, 0.35) inset;
     transition: all var(--transition-1) ease;
   }
@@ -21,7 +20,7 @@ button.export {
   &:active {
     transform: translateY(4px);
     box-shadow:
-      0 0 0 0 var(--color-btn-border),
+      0 0 0 0 var(--color-green-btn),
       0 -4px 4px 0 rgba(175, 175, 175, 0.35) inset;
     transition: all var(--transition-1) ease;
   }
@@ -36,7 +35,7 @@ button.export {
   height: 16px !important;
   width: 16px !important;
   border-radius: 999px;
-  border: 2px solid var(--color-btn-border);
+  border: 2px solid var(--color-green-btn);
   border-top-color: transparent;
   animation: spin 0.6s linear infinite;
 }

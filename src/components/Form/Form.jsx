@@ -199,13 +199,13 @@ export default function Sidebar() {
               <InputColor
                 id="sub-tertiary-cta"
                 label="Sub Tertiary CTA"
-                name="tertiaryCtaBgColor"
-                value={subStyles.tertiaryCtaBgColor}
+                name="subTertiaryCtaBgColor"
+                value={subStyles.subTertiaryCtaBgColor}
                 onValueChange={handleSubStylesChange}
               >
                 <CtaTextColorToggle
-                  name="tertiaryCtaTextColor"
-                  selectedValue={subStyles.tertiaryCtaTextColor}
+                  name="subTertiaryCtaTextColor"
+                  selectedValue={subStyles.subTertiaryCtaTextColor}
                   handleChange={handleSubStylesChange}
                 />
               </InputColor>

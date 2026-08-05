@@ -11,7 +11,9 @@ export default function CtaTextColorToggle({
     >
       <label htmlFor={name}>Text</label>
       <fieldset className="flex flex-1 gap-1">
-        <label className={`${styles.inputToggle} ${styles.inputToggleActive}`}>
+        <label
+          className={`${styles.inputToggle} ${styles.inputToggleActive} flex-1`}
+        >
           <input
             type="radio"
             name={name}
@@ -22,7 +24,7 @@ export default function CtaTextColorToggle({
           />
           Light
         </label>
-        <label className={styles.inputToggle}>
+        <label className={`${styles.inputToggle} flex-1`}>
           <input
             type="radio"
             name={name}

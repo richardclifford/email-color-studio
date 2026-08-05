@@ -24,7 +24,7 @@ export default function Toast({ id, msg, type, onClose }) {
     <>
       <div
         id={id}
-        className={`${styles.toast} ${styles[type]} flex space-between align-center gap-1`}
+        className={`${styles.toast} ${styles[type]} flex space-between align-center gap-1 brdr-radius-main`}
       >
         <div className="flex gap-1 align-center">
           {source}

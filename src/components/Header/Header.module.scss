@@ -3,8 +3,6 @@
 .header {
   background-color: var(--color-green-100);
   padding: 72px 20px 12px;
-  display: flex;
-  justify-content: center;
   transition: padding var(--transition-1) ease;
 
   .headerContainer {
