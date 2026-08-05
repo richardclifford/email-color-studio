@@ -38,12 +38,12 @@ export default function Product1x({
             type={btnType}
             bgColor={
               btnType === "tertiary"
-                ? subStyles.tertiaryCtaBgColor
+                ? subStyles.subTertiaryCtaBgColor
                 : subStyles.subSecondaryCtaBgColor
             }
             textColor={
               btnType === "tertiary"
-                ? subStyles.tertiaryCtaTextColor
+                ? subStyles.subTertiaryCtaTextColor
                 : subStyles.subSecondaryCtaTextColor
             }
           />
@@ -51,12 +51,12 @@ export default function Product1x({
             type={btnType}
             bgColor={
               btnType === "tertiary"
-                ? subStyles.tertiaryCtaBgColor
+                ? subStyles.subTertiaryCtaBgColor
                 : subStyles.subSecondaryCtaBgColor
             }
             textColor={
               btnType === "tertiary"
-                ? subStyles.tertiaryCtaTextColor
+                ? subStyles.subTertiaryCtaTextColor
                 : subStyles.subSecondaryCtaTextColor
             }
             label="Ipsum"
@@ -65,12 +65,12 @@ export default function Product1x({
             type={btnType}
             bgColor={
               btnType === "tertiary"
-                ? subStyles.tertiaryCtaBgColor
+                ? subStyles.subTertiaryCtaBgColor
                 : subStyles.subSecondaryCtaBgColor
             }
             textColor={
               btnType === "tertiary"
-                ? subStyles.tertiaryCtaTextColor
+                ? subStyles.subTertiaryCtaTextColor
                 : subStyles.subSecondaryCtaTextColor
             }
             label="Dolor"
@@ -79,12 +79,12 @@ export default function Product1x({
             type={btnType}
             bgColor={
               btnType === "tertiary"
-                ? subStyles.tertiaryCtaBgColor
+                ? subStyles.subTertiaryCtaBgColor
                 : subStyles.subSecondaryCtaBgColor
             }
             textColor={
               btnType === "tertiary"
-                ? subStyles.tertiaryCtaTextColor
+                ? subStyles.subTertiaryCtaTextColor
                 : subStyles.subSecondaryCtaTextColor
             }
             label="Sit"
@@ -93,12 +93,12 @@ export default function Product1x({
             type={btnType}
             bgColor={
               btnType === "tertiary"
-                ? subStyles.tertiaryCtaBgColor
+                ? subStyles.subTertiaryCtaBgColor
                 : subStyles.subSecondaryCtaBgColor
             }
             textColor={
               btnType === "tertiary"
-                ? subStyles.tertiaryCtaTextColor
+                ? subStyles.subTertiaryCtaTextColor
                 : subStyles.subSecondaryCtaTextColor
             }
             label="Amet"
@@ -107,12 +107,12 @@ export default function Product1x({
             type={btnType}
             bgColor={
               btnType === "tertiary"
-                ? subStyles.tertiaryCtaBgColor
+                ? subStyles.subTertiaryCtaBgColor
                 : subStyles.subSecondaryCtaBgColor
             }
             textColor={
               btnType === "tertiary"
-                ? subStyles.tertiaryCtaTextColor
+                ? subStyles.subTertiaryCtaTextColor
                 : subStyles.subSecondaryCtaTextColor
             }
             label="ConsubSectetur"
