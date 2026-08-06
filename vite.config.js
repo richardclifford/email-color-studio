@@ -10,4 +10,5 @@ export default defineConfig({
     // Optional: Specify a custom port (defaults to 5173)
     port: 3000,
   },
+  base: process.env.VITE_BASE_PATH || "/",
 });
