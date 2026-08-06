@@ -67,23 +67,27 @@ export function CampaignProvider({ children }) {
     const { name, value } = e.target;
     setEmailBg((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: value.length <= 1 ? setEmailBg(DEFAULT_EMAIL_BG) : value,
     }));
   };
 
   const handleHeroStylesChange = (e) => {
     const { name, value } = e.target;
+    const newValue = value.length <= 1 ? DEFAULT_HERO_STYLES[name] : value;
+
     setHeroStyles((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: newValue,
     }));
   };
 
   const handleSubStylesChange = (e) => {
     const { name, value } = e.target;
+    const newValue = value.length <= 1 ? DEFAULT_SUB_STYLES[name] : value;
+
     setSubStyles((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: newValue,
     }));
   };
 
