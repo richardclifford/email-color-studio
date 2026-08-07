@@ -1,5 +1,5 @@
 import InputContainer from "../InputContainer/InputContainer";
-import styles from "./InputText.module.css";
+import styles from "./InputText.module.scss";
 
 export default function InputText({ label, name, value, onValueChange }) {
   return (

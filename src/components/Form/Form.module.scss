@@ -2,6 +2,7 @@
 
 .sidebar {
   width: 500px;
+  min-width: 500px;
   height: fit-content;
   margin-top: 15px;
   padding: 24px;
@@ -15,8 +16,8 @@
   overflow-y: auto;
 
   p {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 0.75rem;
+    line-height: 1rem;
     font-weight: 400;
   }
 }
