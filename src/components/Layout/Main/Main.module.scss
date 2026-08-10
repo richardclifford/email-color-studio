@@ -5,3 +5,10 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    flex-wrap: wrap;
+    // flex-direction: column-reverse;
+  }
+}
