@@ -12,7 +12,7 @@ export const ColorInput = ({
   return (
     <>
       <div className=" flex flex-col gap-1">
-        {label && <label htmlFor={id}>{label}</label>}
+        {label && <label htmlFor={name}>{label}</label>}
         <InputContainer hasPadding={true}>
           <input
             id={id}
@@ -23,7 +23,7 @@ export const ColorInput = ({
             className="colorInput"
           />
           <input
-            id={id}
+            id={name}
             type="text"
             name={name}
             value={value}

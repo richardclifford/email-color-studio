@@ -11,7 +11,7 @@ import InputText from "./InputText/InputText";
 import BtnExport from "./BtnExport/BtnExport";
 import BtnReset from "./BtnReset/BtnReset";
 
-export default function Sidebar() {
+export default function Form() {
   const {
     campaignDetails,
     handleCampaignDetailsChange,
@@ -31,6 +31,7 @@ export default function Sidebar() {
         onSubmit={handleSubmit}
         autoComplete="off"
         className="flex flex-col gap-3"
+        data-testid="form"
       >
         <Row>
           <Column>

@@ -17,6 +17,7 @@ export default function EmailFramework() {
       className={styles.containerEmail}
       ref={emailRef}
       style={{ backgroundColor: emailBg.container }}
+      data-testid="email-framework"
     >
       <Hero />
       <Product1x

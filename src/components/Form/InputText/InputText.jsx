@@ -4,9 +4,10 @@ import styles from "./InputText.module.scss";
 export default function InputText({ label, name, value, onValueChange }) {
   return (
     <>
-      <label>{label}</label>
+      <label htmlFor={name}>{label}</label>
       <InputContainer>
         <input
+          id={name}
           type="text"
           placeholder="Text here..."
           name={name}
