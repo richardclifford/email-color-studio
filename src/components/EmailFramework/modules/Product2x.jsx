@@ -15,7 +15,7 @@ function ProductSingle() {
   return (
     <div className={`${styles.column} flex flex-col`}>
       <ImgUpload />
-      <Badge />
+      <Badge color={subStyles.subBadgeColor} />
       <Headline type="3" />
       <Subcopy bg={"bg"}>Lorem ipsum dolor sit amet, consubSectetur.</Subcopy>
       <BtnContainer>
@@ -36,7 +36,7 @@ export default function Product2x() {
     <div
       id="product-2x"
       className={`${styles.containerComponent} ${styles[subStyles.subBodyTextColor]} bg flex gap-8`}
-      style={{ backgroundColor: subStyles.bgColor }}
+      style={{ backgroundColor: subStyles.subBgColor }}
     >
       <ProductSingle />
       <ProductSingle />

@@ -16,13 +16,13 @@ export default function ProductHalf({ reverse = false }) {
     <div
       id="product-half"
       className={`${styles.containerComponent} ${styles[subStyles.subBodyTextColor]} bg flex gap-8 ${reverse ? "row-reverse" : ""}`}
-      style={{ backgroundColor: subStyles.bgColor }}
+      style={{ backgroundColor: subStyles.subBgColor }}
     >
       <div className={styles.column}>
         <ImgUpload />
       </div>
       <div className={`${styles.column} flex flex-col justify-center`}>
-        <Badge color={subStyles.badgeColor} />
+        <Badge color={subStyles.subBadgeColor} />
         <Headline type="3" />
         <Subcopy bg={"bg"}>Lorem ipsum dolor sit amet, consubSectetur.</Subcopy>
         <BtnContainer>

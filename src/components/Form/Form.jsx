@@ -154,8 +154,8 @@ export default function Form() {
               <InputColor
                 id="sub-bg"
                 label="Sub Background"
-                name="bgColor"
-                value={subStyles.bgColor}
+                name="subBgColor"
+                value={subStyles.subBgColor}
                 onValueChange={handleSubStylesChange}
               />
             </Column>
@@ -163,8 +163,8 @@ export default function Form() {
               <InputColor
                 id="sub-badge"
                 label="Sub Badge"
-                name="badgeColor"
-                value={subStyles.badgeColor}
+                name="subBadgeColor"
+                value={subStyles.subBadgeColor}
                 onValueChange={handleSubStylesChange}
               />
             </Column>

@@ -28,7 +28,7 @@ export default function Events() {
     <div
       id="events"
       className={`${styles.containerComponent} ${styles[subStyles.subBodyTextColor]} flex flex-col gap-8 `}
-      style={{ backgroundColor: subStyles.bgColor }}
+      style={{ backgroundColor: subStyles.subBgColor }}
     >
       <Headline type="2" />
       <Event />

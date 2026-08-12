@@ -24,8 +24,8 @@ export function CampaignProvider({ children }) {
     secondaryCtaTextColor: "dark",
   };
   const DEFAULT_SUB_STYLES = {
-    bgColor: "#FFFFFF",
-    badgeColor: "#161313",
+    subBgColor: "#FFFFFF",
+    subBadgeColor: "#161313",
     transitionBadgeColor: "#161313",
     transitionBodyTextColor: "dark",
     subBodyTextColor: "dark",
@@ -122,7 +122,7 @@ export function CampaignProvider({ children }) {
         `heroSecondaryCtaTextTheme="${heroStyles.secondaryCtaTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
         `heroHorizontalRuleColor="${heroStyles.heroBodyTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
         `\n` +
-        `subCardBgColor="${subStyles.bgColor}"\n` +
+        `subCardBgColor="${subStyles.subBgColor}"\n` +
         `subBadgeColor=${subStyles.badgeColor}"\n` +
         `subTextThemeDefault="${subStyles.subBodyTextColor == "dark" ? EXPORTED_TEXT_COLORS.dark : EXPORTED_TEXT_COLORS.light}"\n` +
         `subSecondaryCtaBgColor="${subStyles.subSecondaryCtaBgColor}"\n` +

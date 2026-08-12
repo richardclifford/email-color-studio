@@ -22,7 +22,7 @@ export default function Product3x() {
     <div
       id="product-3x"
       className={`${styles.containerComponent} ${styles[subStyles.subBodyTextColor]} bg flex gap-8`}
-      style={{ backgroundColor: subStyles.bgColor }}
+      style={{ backgroundColor: subStyles.subBgColor }}
     >
       <ProductSingle />
       <ProductSingle />

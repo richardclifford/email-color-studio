@@ -22,12 +22,14 @@ export default function Product1x({
     <div
       id="product-1x"
       className={`${styles.containerComponent} ${isTransparent ? styles[subStyles.transitionBodyTextColor] : styles[subStyles.subBodyTextColor]} ${isTransparent ? `${styles.transparent}` : ""}`}
-      style={{ backgroundColor: !isTransparent ? subStyles.bgColor : "" }}
+      style={{ backgroundColor: !isTransparent ? subStyles.subBgColor : "" }}
     >
       {hasImg && <ImgUpload />}
       <Badge
         color={
-          isTransparent ? subStyles.transitionBadgeColor : subStyles.badgeColor
+          isTransparent
+            ? subStyles.transitionBadgeColor
+            : subStyles.subBadgeColor
         }
       />
       <Headline type="2" />
