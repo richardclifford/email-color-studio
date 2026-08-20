@@ -214,11 +214,24 @@ export default function Form() {
             <Column></Column>
           </Row>
         </LayoutContainer>
-        <p>
-          Export your theme and share the .txt file with Emily Linner via Teams.
-          Your theme will be converted to a campaign one-sheeter and shared with
-          the team.
-        </p>
+        <div className="flex flex-col gap-1">
+          <p>
+            Before exporting your theme, verify that all color combinations meet
+            AA accessibility standards using the{" "}
+            <a
+              href="https://webaim.org/resources/contrastchecker/"
+              target="_blank"
+            >
+              WebAIM Contrast Checker
+            </a>
+            .
+          </p>
+          <p>
+            Export your theme and share the .txt file with Emily Linner via
+            Teams. Your theme will be converted to a campaign one-sheeter and
+            shared with the team.
+          </p>
+        </div>
         <BtnExport />
         <BtnReset />
       </form>
